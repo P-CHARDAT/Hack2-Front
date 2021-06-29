@@ -1,4 +1,5 @@
 .contenair-animation {
+  z-index: 150;
   overflow: hidden;
   position: absolute;
   width: 100vw;
@@ -119,7 +120,6 @@
     width: 0;
   }
 }
-
 
 .traitBlanc1 {
   position: absolute;
@@ -463,41 +463,44 @@
   }
 }
 
-.background-accueil{
-    background-color: yellow;
-    min-height: 100vh;
+.background-accueil {
+  background-color: yellow;
+  min-height: 100vh;
 }
 
-.accueil-part1, .accueil-part2{
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    height: fit-content;
+.accueil-part1,
+.accueil-part2 {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
 }
 
-.accueil-part2{
-    flex-direction: row-reverse;
+.accueil-part2 {
+  flex-direction: row-reverse;
 }
 
-.accueil-quoi, .accueil-image1{
-    width: 40%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.accueil-quoi,
+.accueil-image1 {
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.accueil-ou, .accueil-image2{
-    width: 40%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.accueil-ou,
+.accueil-image2 {
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.accueil-pourquoi{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25vh
+.accueil-pourquoi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
 }
