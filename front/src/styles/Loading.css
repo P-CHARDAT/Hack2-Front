@@ -1,25 +1,19 @@
 .contenair-animation {
   z-index: 150;
   overflow: hidden;
+  display: block;
   position: absolute;
   width: 100vw;
   height: 100vh;
-  animation-name: porte2;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-delay: 3.5s;
 }
 
-@keyframes click {
-  0% {
-    display: block;
-  }
-  100% {
-    display: none;
-  }
+.contenair-animation-off {
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
-
 .ecranNoir1 {
   background-color: black;
   width: 51vw;
@@ -38,7 +32,7 @@
   width: 51vw;
   height: 100vh;
   position: absolute;
-  right: 0;
+  left: 50vw;
   animation-name: porte2;
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
@@ -49,18 +43,22 @@
 @keyframes porte1 {
   0% {
     transform: translate(0);
+    display: block;
   }
   100% {
     transform: translate(-52vw);
+    display: none;
   }
 }
 
 @keyframes porte2 {
   0% {
     transform: translate(0);
+    display: block;
   }
   100% {
     transform: translate(52vw);
+    display: none;
   }
 }
 
@@ -80,7 +78,7 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  animation-delay: 2.25s;
+  animation-delay: 1.75s;
 }
 
 .anime-image {
@@ -93,31 +91,15 @@
   width: 26vw;
   height: 15vh;
   z-index: 2;
-  animation-name: image;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-delay: 2.75s;
 }
 
 @keyframes text {
   0% {
-    background-color: black;
     transform: scale(1);
   }
   100% {
-    display: none;
     background-color: transparent;
-    transform: scale(4);
-  }
-}
-
-@keyframes image {
-  0% {
-    width: initial;
-  }
-  100% {
-    width: 0;
+    transform: scale(4);    
   }
 }
 
@@ -462,6 +444,7 @@
     bottom: 50vh;
   }
 }
+<<<<<<< HEAD
 
 .background-accueil {
   background-color: yellow;
@@ -504,3 +487,5 @@
   align-items: center;
   height: 25vh;
 }
+=======
+>>>>>>> dev
