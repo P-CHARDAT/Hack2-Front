@@ -1,4 +1,5 @@
 .contenair-animation {
+  z-index: 150;
   overflow: hidden;
   display: block;
   position: absolute;
@@ -101,7 +102,6 @@
     transform: scale(4);    
   }
 }
-
 
 .traitBlanc1 {
   position: absolute;
