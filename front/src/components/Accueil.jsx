@@ -3,15 +3,6 @@ import Loading from "./Loading/Loading";
 import "../styles/Accueil.css";
 import Header from "./Header/Header.jsx";
 
-function Accueil() {
-  const nav = true;
-  const [chargement, setChargement] = useState(false);
-  function load(event) {
-    setTimeout(function () {
-      setChargement(true); // => "click"
-    }, 2750);
-  }
-
   function Accueil(versConnexion) {
     const nav = true;
     const [chargement, setChargement] = useState(false);
