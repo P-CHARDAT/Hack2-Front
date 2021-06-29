@@ -1,38 +1,47 @@
-.background-accueil{
-    background-color: yellow;
-    min-height: 100vh;
+.background-accueil {
+  background-color: yellow;
+  min-height: 100vh;
+  width: 100vw;
 }
 
-.accueil-part1, .accueil-part2{
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    height: fit-content;
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
 }
 
-.accueil-part2{
-    flex-direction: row-reverse;
+.scroll {
+  overflow: hidden;
+  width: 100vw;
 }
 
-.accueil-quoi, .accueil-image1{
-    width: 40%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.accueil-part1,
+.accueil-part2 {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  flex-direction: column;
 }
 
-.accueil-ou, .accueil-image2{
-    width: 40%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.accueil-part2 {
+  flex-direction: column;
 }
 
-.accueil-pourquoi{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25vh
+.accueil-quoi,
+.accueil-image1,
+.accueil-ou,
+.accueil-image2 {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accueil-pourquoi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
 }

@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Loading.css";
 import Logo_fiverr_blanc from "../../images/Logo_fiverr_blanc.png";
 
 export default function Loading() {
+  const [animation, setAnimation] = useState(false)
+  function animOut(event) {
+    setTimeout(function () {
+      setAnimation(true) // => "click"
+    }, 2750);
+  }
+
   return (
-    <div className="contenair-animation">
+    <div className={animation? "contenair-animation-off" : "contenair-animation" }onLoad={animOut}>
       <div className="ecranNoir1"></div>
       <div className="ecranNoir2"></div>
       <div className="traitBlanc1"></div>
