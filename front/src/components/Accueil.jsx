@@ -2,7 +2,7 @@
 import React from "react";
 import "../styles/Accueil.css";
 import { Link } from "react-router-dom";
-import Logo_fiverr_blanc from '../images/Logo_fiverr_blanc.png';
+import Logo_fiverr_blanc from "../images/Logo_fiverr_blanc.png";
 
 function Accueil() {
   return (

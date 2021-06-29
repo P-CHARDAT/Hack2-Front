@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Project.css";
-import camera from "../camera.png";
+import camera from "../images/camera.png";
 
 export default function ParamsProfil() {
   const [fileSelected, setFileSelected] = useState(null);
