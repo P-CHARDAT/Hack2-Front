@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 import Header from "./Header/Header";
 import '../styles/Gallery.css'
 
-function Gallery({versAccueil}) {
+function Gallery() {
   const [projectInfo, setProjectInfo] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Gallery({versAccueil}) {
 
   return (
     <section className="background">
-      <Header versAccueil={versAccueil} />
+      <Header />
       <div className="cardInList">
       <h1 className="listTitle">Our Participants</h1>
         {projectInfo.map((info) => (

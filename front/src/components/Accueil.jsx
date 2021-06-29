@@ -5,7 +5,7 @@ import "../styles/Accueil.css";
 import Header from "./Header/Header.jsx";
 
 
-  function Accueil(versConnexion) {
+  function Accueil() {
     const nav = true;
     const [chargement, setChargement] = useState(false);
     function load(event) {
