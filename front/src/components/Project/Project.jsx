@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import axios from "axios";
-import "../styles/Project.css";
-import camera from "../camera.png";
-import selectphoto from "../selectpicture.png";
+import "./Project.css";
+import camera from "../../images/camera.png";
+import selectphoto from "../../images/selectpicture.png";
 
-export default function ParamsProfil() {
+export default function ParamsProfil({ versAccueil }) {
   const [fileSelected, setFileSelected] = useState(null);
   const [file, setFile] = useState(null);
   const [description, setDescription] = useState(null);
@@ -26,12 +26,13 @@ export default function ParamsProfil() {
       delay: 0.7,
       opacity: 0,
       ease: "power2.out",
-    }).from(traitRef.current, {
-      y: -50,
-      duration: 0.7,
-      opacity: 0,
-      ease: "power2.out",
     })
+      .from(traitRef.current, {
+        y: -50,
+        duration: 0.7,
+        opacity: 0,
+        ease: "power2.out",
+      })
       .from(input1Ref.current, {
         y: -50,
         duration: 0.7,
