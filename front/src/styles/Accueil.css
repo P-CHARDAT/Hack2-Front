@@ -10,31 +10,33 @@
   min-height: 100vh;
 }
 
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+
 .accueil-part1,
 .accueil-part2 {
   width: 100vw;
   display: flex;
   justify-content: space-around;
   height: fit-content;
+  flex-direction: column;
 }
 
-.accueil-part2 {
-  flex-direction: row-reverse;
-}
 
 .accueil-quoi,
-.accueil-image1 {
-  width: 40%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+.accueil-image1,
 .accueil-ou,
 .accueil-image2 {
-  width: 40%;
-  height: auto;
+  width: 100%;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,4 +47,20 @@
   justify-content: center;
   align-items: center;
   height: 25vh;
+}
+
+@media screen and (min-width: 1040px)
+{
+.accueil-part1,
+.accueil-part2 {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  flex-direction: row;
+}
+.accueil-part2{
+    flex-direction: row-reverse;
+}
+  
 }
