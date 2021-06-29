@@ -3,6 +3,20 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
+    animation-name: porte2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 3.5s;
+  }
+
+  @keyframes click {
+    0% {
+      display: block;
+    }
+    100% {
+      display: none;
+    }
   }
 
 .ecranNoir1 {
