@@ -1,10 +1,18 @@
-import React, {useState, useEffect, useRef} from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import Loading from "./Loading/Loading";
 import "../styles/Accueil.css";
 import Header from "./Header/Header.jsx";
 
+function Accueil() {
+  const nav = true;
+  const [chargement, setChargement] = useState(false);
+  function load(event) {
+    setTimeout(function () {
+      setChargement(true); // => "click"
+    }, 2750);
+  }
 
+<<<<<<< HEAD
   function Accueil() {
     const nav = true;
     const [chargement, setChargement] = useState(false);
@@ -50,6 +58,8 @@ import Header from "./Header/Header.jsx";
         clearInterval(interval.current)
       }
     })
+=======
+>>>>>>> dev
   return (
     <div onLoad={load} className={chargement ? "scroll" : "no-scroll"}>
       <Loading />
@@ -72,19 +82,7 @@ import Header from "./Header/Header.jsx";
           />
         </section>
         <article className="accueil-pourquoi">quoi qui</article>
-        <Link to="/Login">
-          <button>Hello</button>
-        </Link>
       </div>
-
-      <p>{timersDays}</p>
-      <p>{timersHours}</p>
-      <p>{timersMinute}</p>
-      <p>{timersSecond}</p>
-
-      <Link to="/Login">
-        <button>Hello</button>
-      </Link>
     </div>
   );
 }
