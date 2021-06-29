@@ -24,11 +24,11 @@ function App() {
             <Category />
           </Route>
 
-          <Route exact path="/Project">
+          <Route path="/Project">
             <Project />
           </Route>
 
-          <Route exact path="/Gallery">
+          <Route path="/Gallery">
             <Gallery />
           </Route>
         </Switch>
