@@ -21,7 +21,7 @@ function Category() {
         setCatList(data);
       });
   }, []);
-  
+
   const handleChange = (event) => {
     if (event.target.value === "musique") {
       clickMusique();
@@ -33,28 +33,28 @@ function Category() {
       clickCategorie();
     }
   };
-  
+
   const clickCategorie = () => {
     setCategorie(true);
     setDeveloppement(false);
     setDesign(false);
     setMusique(false);
   };
-  
+
   const clickDeveloppement = () => {
     setCategorie(false);
     setDeveloppement(true);
     setDesign(false);
     setMusique(false);
   };
-  
+
   const clickDesign = () => {
     setCategorie(false);
     setDeveloppement(false);
     setDesign(true);
     setMusique(false);
   };
-  
+
   const clickMusique = () => {
     setCategorie(false);
     setDeveloppement(false);
@@ -65,10 +65,10 @@ function Category() {
     const TimelineProject = gsap.timeline();
 
     TimelineProject.from(popupRef.current, {
-       scale: 0,
+      scale: 0,
       duration: 0.7,
       delay: 0.7,
-     
+
       ease: "power2.out",
     })
   }, [handleChange]);
@@ -86,10 +86,10 @@ function Category() {
             >
               <option defaultValue={categorie}>Choose a category</option>
               {catList.map((item, index) => (
-            <option key={index} value={item.type}>
-              {item.type}
-            </option>
-          ))}
+                <option key={index} value={item.type}>
+                  {item.type}
+                </option>
+              ))}
             </select>
             {categorie && <div></div>}
             {developpement && (
@@ -128,10 +128,16 @@ function Category() {
           </div>
         </div>
       </div>
-      <Link to="/Project">
-        <button>Projet</button>
-      </Link>
-    </div>
+      <div className="bouton-admin">
+        <p>Admin :</p>
+        <Link to="/Project">
+          <button>Projet</button>
+        </Link>
+        <Link to="/ProjectVote">
+          <button>ProjetVote</button>
+        </Link>
+      </div>
+    </div >
   );
 }
 
