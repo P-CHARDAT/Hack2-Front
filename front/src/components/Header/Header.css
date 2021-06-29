@@ -10,7 +10,7 @@
   margin: auto;
   display: flex;
   justify-content: center;
-  width: 30%;
+  width: 50%;
   height: fit-content;
 }
 .logo {
@@ -51,4 +51,17 @@
 }
 .logo:hover:before {
   transform: skewx(45deg) translateX(-250px);
+}
+
+@media screen and (min-width: 1040px)
+{
+  .wrapper-logo {
+  position: relative;
+  list-style: none;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: fit-content;
+  }
 }

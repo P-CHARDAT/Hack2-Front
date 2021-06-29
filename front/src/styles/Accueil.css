@@ -40,6 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2vh 0;
 }
 
 .accueil-pourquoi {
@@ -61,6 +62,12 @@
 }
 .accueil-part2{
     flex-direction: row-reverse;
+}
+.accueil-quoi,
+.accueil-image1,
+.accueil-ou,
+.accueil-image2 {
+  width: 45%;
 }
   
 }

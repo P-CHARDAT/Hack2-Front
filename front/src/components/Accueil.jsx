@@ -76,7 +76,6 @@ import Header from "./Header/Header.jsx";
           <button>Hello</button>
         </Link>
       </div>
-<<<<<<< HEAD
 
       <p>{timersDays}</p>
       <p>{timersHours}</p>
@@ -86,8 +85,6 @@ import Header from "./Header/Header.jsx";
       <Link to="/Login">
         <button>Hello</button>
       </Link>
-=======
->>>>>>> dev
     </div>
   );
 }
