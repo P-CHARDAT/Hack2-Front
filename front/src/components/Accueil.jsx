@@ -5,6 +5,7 @@ import "../styles/Accueil.css";
 import Header from "./Header/Header.jsx";
 
 
+
   function Accueil(versConnexion) {
     const nav = true;
     const [chargement, setChargement] = useState(false);
@@ -76,7 +77,6 @@ import Header from "./Header/Header.jsx";
           <button>Hello</button>
         </Link>
       </div>
-<<<<<<< HEAD
 
       <p>{timersDays}</p>
       <p>{timersHours}</p>
@@ -86,8 +86,6 @@ import Header from "./Header/Header.jsx";
       <Link to="/Login">
         <button>Hello</button>
       </Link>
-=======
->>>>>>> dev
     </div>
   );
 }

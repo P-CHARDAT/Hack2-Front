@@ -1,0 +1,47 @@
+.category__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container__input {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+#select__categorie {
+    background: #000;
+    color: #fff;
+    border: none;
+    border: 2px solid #fff;
+    padding: 15px 21px;
+    border-radius: 10px;
+    width: 68%;
+    margin: 1rem auto;
+}
+
+.container__option {
+  width: 100%;
+  margin-top: 2rem;
+  background: #000;
+  border-radius: 15px;
+  scale: 1;
+}
+
+.container__option h1 {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.container__option p {
+  font-size: 15px;
+  margin-top: 1rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
