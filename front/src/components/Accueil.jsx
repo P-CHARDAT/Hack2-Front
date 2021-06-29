@@ -4,7 +4,8 @@ import Loading from "./Loading/Loading";
 import "../styles/Accueil.css";
 import Header from "./Header/Header.jsx";
 
-function Accueil() {
+function Accueil(versConnexion) {
+  const nav = true;
   const [chargement, setChargement] = useState(false);
   function load(event) {
     setTimeout(function () {
@@ -15,7 +16,7 @@ function Accueil() {
     <div onLoad={load} className={chargement ? "scroll" : "no-scroll"}>
       <Loading />
       <div className="background-accueil">
-        <Header />
+        <Header nav={nav} />
         <section className="accueil-part1">
           <article className="accueil-quoi">quoi qui</article>
           <img
