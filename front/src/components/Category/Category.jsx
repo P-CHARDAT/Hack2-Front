@@ -133,8 +133,8 @@ function Category() {
         <Link to="/Project">
           <button>Projet</button>
         </Link>
-        <Link to="/ProjectVote">
-          <button>ProjetVote</button>
+        <Link to="/Gallery">
+          <button>Gallery</button>
         </Link>
       </div>
     </div >
