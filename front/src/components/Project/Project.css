@@ -1,10 +1,20 @@
-.container__paramsprofil {
-  width: 100%;
-  height: 100vh;
-  background: #000;
+.background-project{
+  flex-direction: column;  
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  z-index: -2;
+  background: rgb(30, 190, 115);
+  background: radial-gradient(
+    circle,
+    rgba(30, 190, 115, 1) 0%,
+    rgba(148, 187, 233, 1) 89%,
+    rgba(247, 237, 209, 1) 100%
+  );
+  min-height: 100vh;
+}
+
+.container__paramsprofil {
+  display: flex;
+ 
 }
 #trait {
   display: none;
@@ -24,15 +34,13 @@
   width: 65%;
   border-radius: 10%;
   position: relative;
-  padding: 10px;
-  margin-top: 3rem;
+  /* padding: 10px; */
+  /* margin-top: 5%; */
 }
 
 #upload__img {
   margin-top: 2rem;
   padding: 15px 15px;
-  background: #fff;
-  color: #000;
   border: none;
   border: 3px solid greenyellow;
   border-radius: 10px;
@@ -44,7 +52,6 @@
   background: blue;
   color: #fff;
   border: 3px solid #fff;
-  transition: background 0.3s;
 }
 
 #imgPhoto {
@@ -55,7 +62,6 @@
   border: 2px solid #000;
   border-radius: 44%;
   cursor: pointer;
-  transition: background 0.3s;
   position: absolute;
   bottom: -20px;
   right: 0px;
@@ -71,9 +77,9 @@ input[type="file"] {
 }
 .input_projet1 {
   width: 70%;
-  margin: 4rem auto 0rem auto;
+  /* margin: 4rem auto 0rem auto; */
   border-radius: 15px;
-  padding: 10px 10px;
+  padding: 10% 10%;
   border: none;
   border: 3px solid greenyellow;
 }
@@ -99,7 +105,7 @@ input[type="file"] {
   width: 50%;
 
   border-radius: 15px;
-  padding: 10px 10px;
+  padding: auto;
   border: none;
   border: 3px solid red;
  
@@ -116,7 +122,6 @@ input[type="file"] {
   .container__paramsprofil {
     width: 100%;
     height: 100vh;
-    background: #000;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -124,7 +129,7 @@ input[type="file"] {
 
   .container__imgprofil {
     width: 45%;
-    height: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +138,7 @@ input[type="file"] {
     display: flex;
     flex-direction: column;
     width: 45%;
-    height: 100%;
+    height: 80%;
     align-items: center;
     justify-content: center;
   }
@@ -143,7 +148,7 @@ input[type="file"] {
     height: 55%;
     color: #fff;
     background: #fff;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
   
   #img__multer {
@@ -154,7 +159,6 @@ input[type="file"] {
 #imgPhoto{
   
     width: 5%;
-    transition: background 0.3s;
     position: absolute;
     bottom: 193px;
     right: 85px;

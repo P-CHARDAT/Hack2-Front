@@ -23,7 +23,7 @@ function Login({ versAccueil }) {
             <span></span>
             <span></span>
             <span></span>
-            Validate
+            Sign in
           </button>
         </Link>
       </div>
