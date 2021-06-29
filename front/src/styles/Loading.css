@@ -1,24 +1,18 @@
 .contenair-animation {
   overflow: hidden;
+  display: block;
   position: absolute;
   width: 100vw;
   height: 100vh;
-  animation-name: porte2;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-delay: 3.5s;
 }
 
-@keyframes click {
-  0% {
-    display: block;
-  }
-  100% {
-    display: none;
-  }
+.contenair-animation-off {
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
-
 .ecranNoir1 {
   background-color: black;
   width: 51vw;
@@ -37,7 +31,7 @@
   width: 51vw;
   height: 100vh;
   position: absolute;
-  right: 0;
+  left: 50vw;
   animation-name: porte2;
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
@@ -48,18 +42,22 @@
 @keyframes porte1 {
   0% {
     transform: translate(0);
+    display: block;
   }
   100% {
     transform: translate(-52vw);
+    display: none;
   }
 }
 
 @keyframes porte2 {
   0% {
     transform: translate(0);
+    display: block;
   }
   100% {
     transform: translate(52vw);
+    display: none;
   }
 }
 
@@ -79,7 +77,7 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  animation-delay: 2.25s;
+  animation-delay: 1.75s;
 }
 
 .anime-image {
@@ -92,31 +90,15 @@
   width: 26vw;
   height: 15vh;
   z-index: 2;
-  animation-name: image;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-delay: 2.75s;
 }
 
 @keyframes text {
   0% {
-    background-color: black;
     transform: scale(1);
   }
   100% {
-    display: none;
     background-color: transparent;
-    transform: scale(4);
-  }
-}
-
-@keyframes image {
-  0% {
-    width: initial;
-  }
-  100% {
-    width: 0;
+    transform: scale(4);    
   }
 }
 
@@ -461,43 +443,4 @@
     height: 0vh;
     bottom: 50vh;
   }
-}
-
-.background-accueil{
-    background-color: yellow;
-    min-height: 100vh;
-}
-
-.accueil-part1, .accueil-part2{
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    height: fit-content;
-}
-
-.accueil-part2{
-    flex-direction: row-reverse;
-}
-
-.accueil-quoi, .accueil-image1{
-    width: 40%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.accueil-ou, .accueil-image2{
-    width: 40%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.accueil-pourquoi{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25vh
 }
