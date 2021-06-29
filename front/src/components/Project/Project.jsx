@@ -4,6 +4,7 @@ import axios from "axios";
 import "./Project.css";
 import camera from "../../images/camera.png";
 import selectphoto from "../../images/selectpicture.png";
+import Header from "../Header/Header";
 
 export default function ParamsProfil({ versAccueil }) {
   const [fileSelected, setFileSelected] = useState(null);
@@ -97,48 +98,56 @@ export default function ParamsProfil({ versAccueil }) {
     }
   };
   return (
-    <div className="container__paramsprofil">
-      <input type="file" accept="image/*" id="multer" onChange={onChangeFile} />
-      <div className="container__imgprofil" ref={imgRef}>
-        {!file && <img src={selectphoto} alt="test" id="img__multer" />}
-        {file && (
-          <img
-            src={`http://localhost:8000/asset_link/${file.filename}`}
-            alt="test"
-            id="img__multer"
+    <div className="background-project">
+      <Header />
+      <div className="container__paramsprofil">
+        <input
+          type="file"
+          accept="image/*"
+          id="multer"
+          onChange={onChangeFile}
+        />
+        <div className="container__imgprofil" ref={imgRef}>
+          {!file && <img src={selectphoto} alt="test" id="img__multer" />}
+          {file && (
+            <img
+              src={`http://localhost:8000/asset_link/${file.filename}`}
+              alt="test"
+              id="img__multer"
+            />
+          )}
+          <label htmlFor="multer">
+            <img src={camera} alt="selection_image" id="imgPhoto" />
+          </label>
+        </div>
+        <div id="trait" ref={traitRef}></div>
+        <div className="container__validation">
+          <input
+            type="text"
+            className="input_projet1"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Description projet..."
+            ref={input1Ref}
           />
-        )}
-        <label htmlFor="multer">
-          <img src={camera} alt="selection_image" id="imgPhoto" />
-        </label>
-      </div>
-      <div id="trait" ref={traitRef}></div>
-      <div className="container__validation">
-        <input
-          type="text"
-          className="input_projet1"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Description projet..."
-          ref={input1Ref}
-        />
-        <input
-          type="text"
-          className="input_projet2"
-          value={link}
-          onChange={(e) => setLink(e.target.value)}
-          placeholder="url du projet..."
-          ref={input2Ref}
-        />
+          <input
+            type="text"
+            className="input_projet2"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            placeholder="url du projet..."
+            ref={input2Ref}
+          />
 
-        <button
-          id="upload__img"
-          type="submit"
-          onClick={submitFiles}
-          ref={btnRef}
-        >
-          Save Project
-        </button>
+          <button
+            id="upload__img"
+            type="submit"
+            onClick={submitFiles}
+            ref={btnRef}
+          >
+            Save Project
+          </button>
+        </div>
       </div>
     </div>
   );
