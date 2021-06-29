@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import Header from "./Header/Header";
+import '../styles/Gallery.css'
 
-function Gallery() {
+function Gallery({versAccueil}) {
   const [projectInfo, setProjectInfo] = useState([]);
 
   useEffect(() => {
@@ -17,9 +18,10 @@ function Gallery() {
   console.log(projectInfo);
 
   return (
-    <section>
+    <section className="background">
       <Header versAccueil={versAccueil} />
       <div className="cardInList">
+      <h1 className="listTitle">Our Participants</h1>
         {projectInfo.map((info) => (
           <ProjectCard key={info.id} {...info} />
         ))}

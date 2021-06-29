@@ -1,0 +1,24 @@
+.background {
+    z-index: -2;
+    background: rgb(30, 190, 115);
+    background: radial-gradient(
+      circle,
+      rgba(30, 190, 115, 1) 0%,
+      rgba(148, 187, 233, 1) 89%,
+      rgba(247, 237, 209, 1) 100%
+    );
+    min-height: 100vh;
+  }
+
+  .cardInList {
+    font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.listTitle {
+    font-size: 2.5rem;
+  }
