@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "../styles/Accueil.css";
 import { Link } from "react-router-dom";
@@ -6,7 +5,7 @@ import Logo_fiverr_blanc from "../images/Logo_fiverr_blanc.png";
 
 function Accueil() {
   return (
-    <div>
+    <div className="background-accueil">
       <div className="contenair-animation">
         <div className="ecranNoir1"></div>
         <div className="ecranNoir2"></div>
@@ -18,7 +17,7 @@ function Accueil() {
         <div className="carre1"></div>
         <div className="carre2"></div>
         <div className="rondNoir">
-        <img src={Logo_fiverr_blanc} className="anime-image"></img>
+          <img src={Logo_fiverr_blanc} className="anime-image" alt="animeImage"></img>
         </div>
         <div className="traitBlanc3"></div>
         <div className="traitBlanc4"></div>
@@ -26,7 +25,15 @@ function Accueil() {
         <div className="traitBlancI5"></div>
         <div className="traitBlancI6"></div>
       </div>
-
+      <section className="accueil-part1">
+        <article className="accueil-quoi">quoi qui</article>
+        <img className="accueil-image1" src={Logo_fiverr_blanc} alt="image1" />
+      </section>
+      <section className="accueil-part2">
+        <article className="accueil-ou">quoi qui</article>
+        <img className="accueil-image2" src={Logo_fiverr_blanc} alt="image1" />
+      </section>
+      <article className="accueil-pourquoi">quoi qui</article>
       <Link to="/Login">
         <button>Hello</button>
       </Link>
