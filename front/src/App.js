@@ -4,8 +4,8 @@ import { Route, Switch } from "react-router-dom";
 import Accueil from "./components/Accueil";
 import Category from "./components/Category";
 import Gallery from "./components/Gallery";
-import Login from "./components/Login";
-import Project from "./components/Project";
+import Login from "./components/Login/Login";
+import Project from "./components/Project/Project";
 function App() {
   return (
     <div>
