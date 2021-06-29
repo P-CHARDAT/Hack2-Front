@@ -1,27 +1,27 @@
 .contenair-animation {
-    overflow: hidden;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    animation-name: porte2;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 3.5s;
-  }
+  overflow: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  animation-name: porte2;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 3.5s;
+}
 
-  @keyframes click {
-    0% {
-      display: block;
-    }
-    100% {
-      display: none;
-    }
+@keyframes click {
+  0% {
+    display: block;
   }
+  100% {
+    display: none;
+  }
+}
 
 .ecranNoir1 {
   background-color: black;
-  width: 50vw;
+  width: 51vw;
   height: 100vh;
   position: absolute;
   left: 0;
@@ -34,7 +34,7 @@
 
 .ecranNoir2 {
   background-color: black;
-  width: 50vw;
+  width: 51vw;
   height: 100vh;
   position: absolute;
   right: 0;
@@ -50,7 +50,7 @@
     transform: translate(0);
   }
   100% {
-    transform: translate(-50vw);
+    transform: translate(-52vw);
   }
 }
 
@@ -59,7 +59,7 @@
     transform: translate(0);
   }
   100% {
-    transform: translate(50vw);
+    transform: translate(52vw);
   }
 }
 
@@ -134,32 +134,32 @@
 }
 
 .traitBlanc2 {
-    position: absolute;
-    background-color: white;
-    top: 49vh;
-    left: 64vw;
-    width: 0vw;
-    height: 1vh;
-    animation-name: trait2;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 1.5s;
-    animation-timing-function: linear;
+  position: absolute;
+  background-color: white;
+  top: 49vh;
+  left: 64vw;
+  width: 0vw;
+  height: 1vh;
+  animation-name: trait2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  animation-timing-function: linear;
 }
 
 @keyframes trait2 {
-    0% {
-        width: 0vw;
-        left: 64vw;
-    }
-    50% {
-        width: 36vw;
-        left: 64vw;
-    }
-    100% {
-        width: 36vw;
-        left: 100vw;
-    }
+  0% {
+    width: 0vw;
+    left: 64vw;
+  }
+  50% {
+    width: 36vw;
+    left: 64vw;
+  }
+  100% {
+    width: 36vw;
+    left: 100vw;
+  }
 }
 
 .traitBlancI1 {
@@ -335,115 +335,154 @@
 }
 
 .traitBlancI4 {
-    position: absolute;
-    background-color: white;
-    top: 50vh;
+  position: absolute;
+  background-color: white;
+  top: 50vh;
+  right: 35vw;
+  width: 1vh;
+  height: 0vh;
+  animation-name: traitI4;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  z-index: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes traitI4 {
+  0% {
     right: 35vw;
-    width: 1vh;
-    height : 0vh;
-    animation-name: traitI4;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-    z-index: 1;
-    animation-timing-function: linear;
-  }
-  
-  @keyframes traitI4 {
-    0% {
-      right: 35vw;
-      height: 0vh;
-      top: 50vh;
-    }
-    25% {
-      right: 35vw;
-      height: 8vh;
-      top: 50vh;
-    }
-    75% {
-      right: 35vw;
-      height:  8vh;
-      top: 50vh;
-    }
-    100% {
-      right: 35vw;
-      height: 0vh;
-      top: 60vh;
-    }
-  }
-  
-  .traitBlancI5 {
-    position: absolute;
-    background-color: white;
-    top: 58vh;
-    left: 35vw;
-    width: 0vh;
-    height: 1vh;
-    animation-name: traitI5;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.75s;
-    z-index: 1;
-    animation-timing-function: linear;
-  }
-  
-  @keyframes traitI5 {
-    0% {
-      left: 65vw;
-      width: 0vh;
-      top: 58vh;
-    }
-    25% {
-      left: 35vw;
-      width: 30vw;
-      top: 58vh;
-    }
-    75% {
-      left: 35vw;
-      width: 30vw;
-      top: 58vh;
-    }
-    100% {
-      left: 35vw;
-      width: 0vw;
-      top: 58vh;
-    }
-  }
-  
-  .traitBlancI6 {
-    position: absolute;
-    background-color: white;
-    bottom: 58vh;
-    left: 35vw;
-    width: 1vh;
     height: 0vh;
-    animation-name: traitI6;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-    z-index: 1;
-    animation-timing-function: linear;
+    top: 50vh;
   }
-  
-  @keyframes traitI6 {
-    0% {
-      left: 35vw;
-      height: 0vh;
-      bottom: 42vh;
-    }
-    25% {
-      left: 35vw;
-      height: 8vh;
-      bottom: 42vh;
-    }
-    75% {
-      left: 35vw;
-      height: 8vh;
-      bottom: 42vh;
-    }
-    100% {
-      left: 35vw;
-      height: 0vh;
-      bottom: 50vh;
-    }
+  25% {
+    right: 35vw;
+    height: 8vh;
+    top: 50vh;
   }
+  75% {
+    right: 35vw;
+    height: 8vh;
+    top: 50vh;
+  }
+  100% {
+    right: 35vw;
+    height: 0vh;
+    top: 60vh;
+  }
+}
+
+.traitBlancI5 {
+  position: absolute;
+  background-color: white;
+  top: 58vh;
+  left: 35vw;
+  width: 0vh;
+  height: 1vh;
+  animation-name: traitI5;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.75s;
+  z-index: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes traitI5 {
+  0% {
+    left: 65vw;
+    width: 0vh;
+    top: 58vh;
+  }
+  25% {
+    left: 35vw;
+    width: 30vw;
+    top: 58vh;
+  }
+  75% {
+    left: 35vw;
+    width: 30vw;
+    top: 58vh;
+  }
+  100% {
+    left: 35vw;
+    width: 0vw;
+    top: 58vh;
+  }
+}
+
+.traitBlancI6 {
+  position: absolute;
+  background-color: white;
+  bottom: 58vh;
+  left: 35vw;
+  width: 1vh;
+  height: 0vh;
+  animation-name: traitI6;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  z-index: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes traitI6 {
+  0% {
+    left: 35vw;
+    height: 0vh;
+    bottom: 42vh;
+  }
+  25% {
+    left: 35vw;
+    height: 8vh;
+    bottom: 42vh;
+  }
+  75% {
+    left: 35vw;
+    height: 8vh;
+    bottom: 42vh;
+  }
+  100% {
+    left: 35vw;
+    height: 0vh;
+    bottom: 50vh;
+  }
+}
+
+.background-accueil{
+    background-color: yellow;
+    min-height: 100vh;
+}
+
+.accueil-part1, .accueil-part2{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+.accueil-part2{
+    flex-direction: row-reverse;
+}
+
+.accueil-quoi, .accueil-image1{
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil-ou, .accueil-image2{
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil-pourquoi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh
+}

@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import Header from "./Header/Header";
 
-function Gallery() {
-    return (
-        <div>
-            <p>gallery</p>
-        </div>
-    )
+function Gallery({ versAccueil }) {
+  return (
+    <div>
+      <Header versAccueil={versAccueil} />
+
+      <div>
+        <p>gallery</p>
+      </div>
+    </div>
+  );
 }
 
-export default Gallery
+export default Gallery;

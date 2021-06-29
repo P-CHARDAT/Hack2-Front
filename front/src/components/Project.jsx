@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Project.css";
 import camera from "../images/camera.png";
+import Header from "./Header/Header";
 
-export default function ParamsProfil() {
+export default function ParamsProfil({ versAccueil }) {
   const [fileSelected, setFileSelected] = useState(null);
   const [file, setFile] = useState(null);
 
@@ -43,24 +44,32 @@ export default function ParamsProfil() {
     }
   };
   return (
-    <div className="container__paramsprofil">
-      <input type="file" accept="image/*" id="multer" onChange={onChangeFile} />
-      <div className="container__imgprofil">
-        {file && (
-          <img
-            src={`http://localhost:8000/api/images_profil/${file.filename}`}
-            alt="test"
-            id="img__multer"
-          />
-        )}
-        <label htmlFor="multer">
-          <img src={camera} alt="selection_image" id="imgPhoto" />
-        </label>
-      </div>
+    <div>
+      <Header versAccueil={versAccueil} />
+      <div className="container__paramsprofil">
+        <input
+          type="file"
+          accept="image/*"
+          id="multer"
+          onChange={onChangeFile}
+        />
+        <div className="container__imgprofil">
+          {file && (
+            <img
+              src={`http://localhost:8000/api/images_profil/${file.filename}`}
+              alt="test"
+              id="img__multer"
+            />
+          )}
+          <label htmlFor="multer">
+            <img src={camera} alt="selection_image" id="imgPhoto" />
+          </label>
+        </div>
 
-      <button id="upload__img" type="submit" onClick={submitFiles}>
-        Save New Image
-      </button>
+        <button id="upload__img" type="submit" onClick={submitFiles}>
+          Save New Image
+        </button>
+      </div>
     </div>
   );
 }
