@@ -50,6 +50,7 @@
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   transition: 0.5s;
+  margin: 2vh 0;
 }
 
 .accueil-pourquoi {
@@ -71,6 +72,12 @@
 }
 .accueil-part2{
     flex-direction: row-reverse;
+}
+.accueil-quoi,
+.accueil-image1,
+.accueil-ou,
+.accueil-image2 {
+  width: 45%;
 }
   
 }
