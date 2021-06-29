@@ -28,7 +28,7 @@ import Header from "./Header/Header.jsx";
     
       const day = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
-      const minute = Math.floor(( distance % (1000 * 60 * 60 * 24)) / (1000 * 60));
+      const minute = Math.floor(( distance % (1000 * 60 * 24)) / (1000 * 60));
       const seconde =  Math.floor((distance % (1000 * 60 )) / 1000);
     
       if(distance < 0){
