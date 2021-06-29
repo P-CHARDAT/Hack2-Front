@@ -1,4 +1,3 @@
-
 .no-scroll {
   height: 100vh;
   overflow: hidden;
@@ -77,6 +76,177 @@
   margin: 2vh 0;
 }
 
+.accueil-imageC1,
+.accueil-imageC2,
+.accueil-imageC3,
+.accueil-imageC4,
+.accueil-imageC5,
+.accueil-imageC6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation-timing-function: linear;
+}
+
+.accueil-imageC1 {
+  opacity: 0;
+  animation-name: imageCar1;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.accueil-imageC2 {
+  opacity: 0;
+  animation-name: image2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.accueil-imageC3 {
+  opacity: 0;
+  animation-name: image3;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes imageCar1 {
+  0% {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 100%;
+  }
+  20% {
+    opacity: 100%;
+  }
+  30% {
+    opacity: 100%;
+  }
+  40% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  70% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 0%;
+  }
+  90% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes image2 {
+  0% {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 0%;
+  }
+  30% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 100%;
+  }
+  70% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 0%;
+  }
+  90% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes image3 {
+  0% {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 0%;
+  }
+  30% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  70% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.accueil-imageC4 {
+  opacity: 0;
+  animation-name: imageCar1;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.accueil-imageC5 {
+  opacity: 0;
+  animation-name: image2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.accueil-imageC6 {
+  opacity: 0;
+  animation-name: image3;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.contenair-carrous1 {
+  position: relative;
+  width: 90vw;
+  height: 40vh;
+  margin: 2vh 0;
+}
+
 @media screen and (min-width: 1040px) {
   .accueil-part1,
   .accueil-part2 {
@@ -94,5 +264,11 @@
   .accueil-ou,
   .accueil-image2 {
     width: 45%;
+  }
+  .contenair-carrous1 {
+    position: relative;
+    width: 45vw;
+    height: 40vh;
+    margin: 2vh 0;
   }
 }
