@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
+import Header from "./Header/Header";
 
 function Gallery() {
   const [projectInfo, setProjectInfo] = useState([]);
@@ -16,11 +17,14 @@ function Gallery() {
   console.log(projectInfo);
 
   return (
-    <div className="cardInList">
-      {projectInfo.map((info) => (
-        <ProjectCard key={info.id} {...info} />
-      ))}
-    </div>
+    <section>
+      <Header versAccueil={versAccueil} />
+      <div className="cardInList">
+        {projectInfo.map((info) => (
+          <ProjectCard key={info.id} {...info} />
+        ))}
+      </div>
+    </section>
   );
 }
 

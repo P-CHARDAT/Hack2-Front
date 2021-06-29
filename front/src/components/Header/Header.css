@@ -1,0 +1,69 @@
+.wrapper-logo {
+  margin: auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 5vh;
+}
+.logo-overflow {
+  width: fit-content;
+  height: 100px;
+  overflow: hidden;
+}
+.logo {
+  z-index: 3;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.logo:hover {
+  transform: translateY(20px);
+}
+
+.logo:hover::before {
+  transform: skewx(45deg) translateX(-150px);
+}
+.reflect {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(70vw);
+  transition: 0.5s;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes reflectTranslate1 {
+  from {
+    transform: skewX(45deg) translateX(70vw);
+  }
+  to {
+    transform: skewX(45deg) translateX(0vw);
+  }
+}
+@keyframes reflectTranslate2 {
+  from {
+    transform: skewX(45deg) translateX(0vw);
+  }
+  to {
+    transform: skewX(45deg) translateX(70vw);
+  }
+}

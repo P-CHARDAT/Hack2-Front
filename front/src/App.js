@@ -1,38 +1,41 @@
 import React from "react";
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useHistory } from "react-router-dom";
 import Accueil from "./components/Accueil";
 import Category from "./components/Category";
-import CategoryVote from "./components/CategoryVote";
 import Gallery from "./components/Gallery";
 import Login from "./components/Login";
 import Project from "./components/Project";
 function App() {
+  let history = useHistory();
+  const versConnexion = () => {
+    history.push("/Login");
+  };
+    const versAccueil = () => {
+      history.push("/");
+    };
+
   return (
     <div>
       <Switch>
         <Route exact path="/">
-          <Accueil />
+          <Accueil versConnexion={versConnexion} />
         </Route>
 
         <Route path="/Login">
-          <Login />
+          <Login versAccueil={versAccueil} />
         </Route>
 
         <Route path="/Category">
-          <Category />
+          <Category versAccueil={versAccueil}/>
         </Route>
 
         <Route exact path="/Project">
-          <Project />
-        </Route>
-
-        <Route exact path="/CategoryVote">
-          <CategoryVote />
+          <Project versAccueil={versAccueil}/>
         </Route>
 
         <Route exact path="/Gallery">
-          <Gallery />
+          <Gallery versAccueil={versAccueil}/>
         </Route>
       </Switch>
     </div>
