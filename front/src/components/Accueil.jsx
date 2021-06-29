@@ -19,23 +19,47 @@ function Accueil() {
         <Header nav={nav} />
         <section className="accueil-part1">
           <article className="accueil-quoi">quoi qui</article>
-          <img
-            className="accueil-image1"
-            src={require("../images/Logo_fiverr_blanc.png")}
-            alt="image1"
-          />
+          <section className="contenair-carrous1">
+            <img
+              className="accueil-imageC1"
+              src={require("../images/axel_a.png")}
+              alt="image1"
+            />
+            <img
+              className="accueil-imageC2"
+              src={require("../images/sylvain_a.png")}
+              alt="image1"
+            />
+            <img
+              className="accueil-imageC3"
+              src={require("../images/damien_a.png")}
+              alt="image1"
+            />
+          </section>
         </section>
         <section className="accueil-part2">
           <article className="accueil-ou">quoi qui</article>
-          <img
-            className="accueil-image2"
-            src={require("../images/Logo_fiverr_blanc.png")}
-            alt="image1"
-          />
+          <section className="contenair-carrous1">
+            <img
+              className="accueil-imageC4"
+              src={require("../images/thomas_a.png")}
+              alt="image1"
+            />
+            <img
+              className="accueil-imageC5"
+              src={require("../images/pierre_a.png")}
+              alt="image1"
+            />
+            <img
+              className="accueil-imageC6"
+              src={require("../images/sylvain_a.png")}
+              alt="image1"
+            />
+          </section>
         </section>
         <article className="accueil-pourquoi">quoi qui</article>
       </div>
-    </div>
+    </div >
   );
 }
 
