@@ -24,7 +24,7 @@
 
 .projectPicture {
   width: 90%;
-  border-radius: 
+  border-radius: 10px;
 }
 
 .projectPicture > img {
