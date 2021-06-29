@@ -6,30 +6,38 @@ import Category from "./components/Category/Category";
 import Gallery from "./components/Gallery";
 import Login from "./components/Login/Login";
 import Project from "./components/Project/Project";
+import HackaContext from "./contexts/HackaContext";
+import ProjectVote from "./components/ProjectVote/ProjectVote";
 function App() {
   return (
     <div>
-      <Switch>
-        <Route exact path="/">
-          <Accueil />
-        </Route>
+      <HackaContext.Provider>
+        <Switch>
+          <Route exact path="/">
+            <Accueil />
+          </Route>
 
-        <Route path="/Login">
-          <Login />
-        </Route>
+          <Route path="/Login">
+            <Login />
+          </Route>
 
-        <Route path="/Category">
-          <Category />
-        </Route>
+          <Route path="/Category">
+            <Category />
+          </Route>
 
-        <Route exact path="/Project">
-          <Project />
-        </Route>
+          <Route path="/Project">
+            <Project />
+          </Route>
 
-        <Route exact path="/Gallery">
-          <Gallery />
-        </Route>
-      </Switch>
+          <Route path="/Gallery">
+            <Gallery />
+          </Route>
+
+          <Route path="/ProjectVote">
+            <ProjectVote />
+          </Route>
+        </Switch>
+      </HackaContext.Provider>
     </div>
   );
 }
