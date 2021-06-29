@@ -30,9 +30,6 @@
   flex-direction: column;
 }
 
-.accueil-part2 {
-  flex-direction: column;
-}
 
 .accueil-quoi,
 .accueil-image1,
@@ -50,4 +47,20 @@
   justify-content: center;
   align-items: center;
   height: 25vh;
+}
+
+@media screen and (min-width: 1040px)
+{
+.accueil-part1,
+.accueil-part2 {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  flex-direction: row;
+}
+.accueil-part2{
+    flex-direction: row-reverse;
+}
+  
 }
