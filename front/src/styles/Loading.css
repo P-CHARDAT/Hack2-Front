@@ -92,6 +92,11 @@
   width: 26vw;
   height: 15vh;
   z-index: 2;
+  animation-name: image;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 2.75s;
 }
 
 @keyframes text {
@@ -105,6 +110,16 @@
     transform: scale(4);
   }
 }
+
+@keyframes image {
+  0% {
+    width: initial;
+  }
+  100% {
+    width: 0;
+  }
+}
+
 
 .traitBlanc1 {
   position: absolute;
