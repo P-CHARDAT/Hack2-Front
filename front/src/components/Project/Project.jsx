@@ -6,7 +6,7 @@ import camera from "../../images/camera.png";
 import selectphoto from "../../images/selectpicture.png";
 import Header from "../Header/Header";
 
-export default function ParamsProfil({ versAccueil }) {
+export default function ParamsProfil() {
   const [fileSelected, setFileSelected] = useState(null);
   const [file, setFile] = useState(null);
   const [description, setDescription] = useState(null);
@@ -26,52 +26,52 @@ export default function ParamsProfil({ versAccueil }) {
 
     TimelineProject.from(imgRefContainer.current, {
       y: -50,
-      duration: 0.7,
+      duration: 0.5,
       delay: 1,
       opacity: 0,
       ease: "power2.out",
     })
       .from(imgRef.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(labelImgRef.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(traitRef.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(containerValidationRef.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       
       .from(input1Ref.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.2,
         delay: 0.1,
         opacity: 0,
         ease: "power2.out",
       })
       .from(input2Ref.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(btnRef.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       });
