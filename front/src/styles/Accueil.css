@@ -209,35 +209,119 @@
   }
 }
 
-.traitBlanc4 {
-    position: absolute;
-    background-color: white;
-    top: 50vh;
-    right: 64vw;
+.traitBlancI1 {
+  position: absolute;
+  background-color: white;
+  bottom: 50vh;
+  left: 35vw;
+  width: 1vh;
+  height: 0vh;
+  animation-name: traitI1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  z-index: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes traitI1 {
+  0% {
+    left: 35vw;
+    height: 0vh;
+    bottom: 50vh;
+  }
+  25% {
+    left: 35vw;
+    height: 8vh;
+    bottom: 50vh;
+  }
+  75% {
+    left: 35vw;
+    height: 8vh;
+    bottom: 50vh;
+  }
+  100% {
+    left: 35vw;
+    height: 0vh;
+    bottom: 58vh;
+  }
+}
+
+.traitBlancI2 {
+  position: absolute;
+  background-color: white;
+  bottom: 58vh;
+  right: 35vw;
+  width: 0vh;
+  height: 1vh;
+  animation-name: traitI2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.75s;
+  z-index: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes traitI2 {
+  0% {
+    right: 65vw;
+    width: 0vh;
+    bottom: 58vh;
+  }
+  25% {
+    right: 35vw;
+    width: 30vw;
+    bottom: 58vh;
+  }
+  75% {
+    right: 35vw;
+    width: 30vw;
+    bottom: 58vh;
+  }
+  100% {
+    right: 35vw;
     width: 0vw;
-    height: 1vh;
-    animation-name: trait4;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
-    z-index: 1;
-    animation-timing-function: linear;
+    bottom: 58vh;
   }
-  
-  @keyframes trait4 {
-    0% {
-      right: 64vw;
-      width: 0vw;
-    }
-    50% {
-      right: 64vw;
-      width: 36vw;
-    }
-    100% {
-      right: 100vw;
-      width: 0vw;
-    }
+}
+
+.traitBlancI3 {
+  position: absolute;
+  background-color: white;
+  bottom: 58vh;
+  right: 35vw;
+  width: 1vh;
+  height: 0vh;
+  animation-name: traitI3;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  z-index: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes traitI3 {
+  0% {
+    right: 35vw;
+    height: 0vh;
+    top: 42vh;
   }
+  25% {
+    right: 35vw;
+    height: 8vh;
+    top: 42vh;
+  }
+  75% {
+    right: 35vw;
+    height: 8vh;
+    top: 42vh;
+  }
+  100% {
+    right: 35vw;
+    height: 0vh;
+    top: 50vh;
+  }
+}
 
 .traitBlanc2 {
   position: absolute;
@@ -249,7 +333,7 @@
   animation-name: trait2;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  animation-delay: 3s;
+  animation-delay: 1.5s;
   animation-timing-function: linear;
 }
 
