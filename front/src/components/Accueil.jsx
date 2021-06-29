@@ -11,10 +11,10 @@ function Accueil() {
         <div className="ecranNoir1"></div>
         <div className="ecranNoir2"></div>
         <div className="traitBlanc1"></div>
+        <div className="traitBlanc2"></div>
         <div className="traitBlancI1"></div>
         <div className="traitBlancI2"></div>
         <div className="traitBlancI3"></div>
-        <div className="traitBlanc2"></div>
         <div className="carre1"></div>
         <div className="carre2"></div>
         <div className="rondNoir">
@@ -22,6 +22,9 @@ function Accueil() {
         </div>
         <div className="traitBlanc3"></div>
         <div className="traitBlanc4"></div>
+        <div className="traitBlancI4"></div>
+        <div className="traitBlancI5"></div>
+        <div className="traitBlancI6"></div>
       </div>
 
       <Link to="/Login">
