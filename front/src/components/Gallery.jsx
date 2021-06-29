@@ -10,12 +10,9 @@ function Gallery() {
     fetch("http://localhost:8000/api/project/infos")
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
         setProjectInfo(data);
       });
   }, []);
-
-  console.log(projectInfo);
 
   return (
     <section className="background">
