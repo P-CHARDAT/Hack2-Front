@@ -1,7 +1,13 @@
 .background-accueil {
-  background-color: yellow;
+  z-index: -2;
+  background: rgb(30, 190, 115);
+  background: radial-gradient(
+    circle,
+    rgba(30, 190, 115, 1) 0%,
+    rgba(148, 187, 233, 1) 89%,
+    rgba(247, 237, 209, 1) 100%
+  );
   min-height: 100vh;
-  width: 100vw;
 }
 
 .no-scroll {
