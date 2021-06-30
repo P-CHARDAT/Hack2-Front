@@ -36,7 +36,7 @@
   /* border-radius: 10%; */
   position: relative;
   padding: 10px;
-  margin-top: 5%;
+  margin: 5%;
 
   /* position: relative; */
   /* width: 200px;
@@ -136,7 +136,7 @@ input[type="file"] {
   flex-direction: column;
   justify-content: center;
   width: 90%;
-  margin-top: 3%;
+  margin: 3%;
   align-items: center;
 
   padding-top: 10px;
@@ -187,7 +187,6 @@ input[type="file"] {
   }
   .container__validation {
     padding: 0;
-    margin-top: 0;
     display: flex;
     flex-direction: column;
     width: 45%;

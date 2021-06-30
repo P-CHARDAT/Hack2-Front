@@ -1,3 +1,7 @@
+.contain{
+  background-size: contain
+}
+
 .couleur-fond{
   background: linear-gradient(170.46deg, #1EBE73 10.05%, #4BA3C3 48.85%, #F5CB5C 91.91%);
   width: 100%;
@@ -277,5 +281,8 @@
     width: 45vw;
     height: 50vh;
     margin: 2vh 0;
+  }
+  .contain{
+    background-size: cover
   }
 }
