@@ -87,7 +87,7 @@ export default function ParamsProfil({ versAccueil }) {
         .then((data) => {
           console.log(data);
           setFile({
-            filename: data.asset_link,
+            filename: `http://localhost:8000/asset_link/` + data.asset_link,
           });
           setDescription("");
           setLink("");
@@ -109,13 +109,7 @@ export default function ParamsProfil({ versAccueil }) {
         />
         <div className="container__imgprofil" ref={imgRef}>
           {!file && <img src={selectphoto} alt="test" id="img__multer" />}
-          {file && (
-            <img
-              src={`http://localhost:8000/asset_link/${file.filename}`}
-              alt="test"
-              id="img__multer"
-            />
-          )}
+          {file && <img src={file.filename} alt="test" id="img__multer" />}
           <label htmlFor="multer">
             <img src={camera} alt="selection_image" id="imgPhoto" />
           </label>
