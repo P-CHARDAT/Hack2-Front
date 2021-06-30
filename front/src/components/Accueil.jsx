@@ -5,7 +5,6 @@ import Header from "./Header/Header.jsx";
 import { gsap } from "gsap";
 import Group_53 from '../images/Group_53.svg'
 
-
 function Accueil() {
   const nav = true;
   const [chargement, setChargement] = useState(false);
@@ -22,7 +21,6 @@ function Accueil() {
   const imgRef2 = useRef(null);
   const textRef2 = useRef(null);
   const textRef3 = useRef(null);
-
 
   useEffect(() => {
     const TimelineProject = gsap.timeline();
