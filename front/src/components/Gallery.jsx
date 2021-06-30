@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
+import { Link } from "react-router-dom";
 import Header from "./Header/Header";
 import '../styles/Gallery.css'
 import Group_53 from '../images/Group_53.svg'
 
 function Gallery() {
   const [projectInfo, setProjectInfo] = useState([]);
+
+  
 
   useEffect(() => {
     fetch("http://localhost:8000/api/project/infos")

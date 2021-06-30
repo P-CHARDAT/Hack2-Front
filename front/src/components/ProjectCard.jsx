@@ -1,8 +1,17 @@
 import React from "react";
+import { useHistory } from 'react-router-dom'
 import '../styles/ProjectCard.css'
 import Group_53 from '../images/Group_53.svg'
 
-function ProjectCard({ asset_link, description, pseudo, type, url_link }) {
+function ProjectCard({ asset_link, description, pseudo, type, url_link, id}) {
+
+
+  const history = useHistory();
+
+  const selectProjet = () => {
+    window.scroll(0, 0);
+    history.push('/ProjectVote/' + id);
+  };
   return (
 
     <div className="couleur-fond" style={{

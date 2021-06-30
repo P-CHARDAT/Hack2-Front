@@ -117,7 +117,7 @@ export default function ParamsProfil() {
         .then((data) => {
           console.log(data);
           setFile({
-            filename: data.asset_link,
+            filename: `http://localhost:8000/asset_link/` + data.asset_link,
           });
           setDescription("");
           setLink("");
@@ -128,20 +128,19 @@ export default function ParamsProfil() {
     }
   };
   return (
-
     <div className="couleur-fond"  >
       <div className="background-project" style={{
         backgroundImage: `url(${Group_53})`,
         backgroundSize: "cover"
       }} ref={allRef}>
         <Header />
-        <div className="container__paramsprofil">
-          <input
-            type="file"
-            accept="image/*"
-            id="multer"
-            onChange={onChangeFile}
-          />
+      <div className="container__paramsprofil">
+        <input
+          type="file"
+          accept="image/*"
+          id="multer"
+          onChange={onChangeFile}
+        />
 
           <div className="container__imgprofil" ref={imgRefContainer}>
             {!file && (
