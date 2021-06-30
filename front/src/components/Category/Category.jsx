@@ -107,7 +107,7 @@ function Category() {
             {categorie && <div></div>}
             {developpement && (
               <div className="container__option" ref={popupRef}>
-                <h1>Theme : Web Development</h1>
+                <h2>Theme : Web Development</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                   dolorem animi sequi, quisquam pariatur minima aperiam. Odio
@@ -118,7 +118,7 @@ function Category() {
             )}
             {design && (
               <div className="container__option" ref={popupRef}>
-                <h1>Theme : Portrait</h1>
+                <h2>Theme : Portrait</h2>
                 <p>
                   Check your skills on drawing portraits and share your artwork
                   with the whole community to have a place on{" "}
@@ -128,7 +128,7 @@ function Category() {
             )}
             {programming && (
               <div className="container__option" ref={popupRef}>
-                <h1>Theme : Create the next React application</h1>
+                <h2>Theme : Create the next React application</h2>
                 <p>
                   Any React.js-based web site can candidate to obtain this
                   semestrial award on React application development.
