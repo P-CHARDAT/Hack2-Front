@@ -1,6 +1,6 @@
 import React from "react";
-import '../styles/ProjectCard.css'
-import Group_53 from '../images/Group_53.svg'
+import '../styles/ProjectCard.css';
+import Group_53 from '../images/Group_53.svg';
 
 function ProjectCard({ asset_link, description, pseudo, type, url_link }) {
   return (

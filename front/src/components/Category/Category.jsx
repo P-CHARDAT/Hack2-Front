@@ -16,6 +16,8 @@ function Category() {
   const popupRef = useRef(null);
   const allRef = useRef(null);
 
+
+  
   useEffect(() => {
     fetch("http://localhost:8000/api/category")
       .then((resp) => resp.json())
