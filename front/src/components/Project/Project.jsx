@@ -5,7 +5,8 @@ import "./Project.css";
 import camera from "../../images/camera.png";
 import selectphoto from "../../images/selectpicture.png";
 import Header from "../Header/Header";
-import Group_53 from '../../images/Group_53.svg'
+import Tilt from "react-parallax-tilt";
+import Group_53 from "../../images/Group_53.svg";
 
 export default function ParamsProfil() {
   const [fileSelected, setFileSelected] = useState(null);
@@ -128,23 +129,34 @@ export default function ParamsProfil() {
     }
   };
   return (
-    <div className="couleur-fond"  >
-      <div className="background-project" style={{
-        backgroundImage: `url(${Group_53})`,
-        backgroundSize: "cover"
-      }} ref={allRef}>
+    <div className="couleur-fond">
+      <div
+        className="background-project"
+        style={{
+          backgroundImage: `url(${Group_53})`,
+          backgroundSize: "cover",
+        }}
+        ref={allRef}
+      >
         <Header />
-      <div className="container__paramsprofil">
-        <input
-          type="file"
-          accept="image/*"
-          id="multer"
-          onChange={onChangeFile}
-        />
+        <div className="container__paramsprofil">
+          <input
+            type="file"
+            accept="image/*"
+            id="multer"
+            onChange={onChangeFile}
+          />
 
           <div className="container__imgprofil" ref={imgRefContainer}>
             {!file && (
-              <img src={selectphoto} alt="test" id="img__multer" ref={imgRef} />
+              <Tilt>
+                <img
+                  src={selectphoto}
+                  alt="test"
+                  id="img__multer"
+                  ref={imgRef}
+                />
+              </Tilt>
             )}
             {file && (
               <img
