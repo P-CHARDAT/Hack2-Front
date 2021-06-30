@@ -13,6 +13,7 @@ function Category() {
   const [programming, setProgramming] = useState(false);
 
   const popupRef = useRef(null);
+  const allRef = useRef(null);
 
   useEffect(() => {
     fetch("http://localhost:8000/api/category")
@@ -54,13 +55,26 @@ function Category() {
     setDesign(true);
     setProgramming(false);
   };
-  
+
   const clickProgramming = () => {
     setCategorie(false);
     setDeveloppement(false);
     setDesign(false);
     setProgramming(true);
   };
+
+  useEffect(() => {
+    const TimelineProject = gsap.timeline();
+
+    TimelineProject.from(allRef.current, {
+      y: -50,
+      duration: 0.7,
+      delay: 0.5,
+      opacity: 0,
+      ease: "power2.out",
+    });
+  }, []);
+
   useEffect(() => {
     const TimelineProject = gsap.timeline();
 
@@ -68,17 +82,16 @@ function Category() {
       scale: 0,
       duration: 0.7,
       delay: 0.7,
-
       ease: "power2.out",
-    })
+    });
   }, [handleChange]);
 
   return (
-    <div>
+    <div className="background-category">
       <Header />
       <div>
         <div className="category__container">
-          <div className="container__input">
+          <div className="container__input" ref={allRef}>
             <select
               name="categorie"
               id="select__categorie"
@@ -94,7 +107,7 @@ function Category() {
             {categorie && <div></div>}
             {developpement && (
               <div className="container__option" ref={popupRef}>
-                <h1>Theme : Web Développement</h1>
+                <h1>Theme : Web Development</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                   dolorem animi sequi, quisquam pariatur minima aperiam. Odio
@@ -107,7 +120,9 @@ function Category() {
               <div className="container__option" ref={popupRef}>
                 <h1>Theme : Portrait</h1>
                 <p>
-                  Check your skills on drawing portraits and share your artwork with the whole community to have a place on <strong>Fiverr's wall of fames</strong> !
+                  Check your skills on drawing portraits and share your artwork
+                  with the whole community to have a place on{" "}
+                  <strong>Fiverr's wall of fames</strong> !
                 </p>
               </div>
             )}
@@ -115,7 +130,8 @@ function Category() {
               <div className="container__option" ref={popupRef}>
                 <h1>Theme : Create the next React application</h1>
                 <p>
-                  Any React.js-based web site can candidate to obtain this semestrial award on React application development.
+                  Any React.js-based web site can candidate to obtain this
+                  semestrial award on React application development.
                 </p>
               </div>
             )}
@@ -131,7 +147,7 @@ function Category() {
           <button>Gallery</button>
         </Link>
       </div>
-    </div >
+    </div>
   );
 }
 

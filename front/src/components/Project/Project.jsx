@@ -66,7 +66,6 @@ export default function ParamsProfil() {
       .from(input1Ref.current, {
         y: -50,
         duration: 0.2,
-        delay: 0.1,
         opacity: 0,
         ease: "power2.out",
       })
