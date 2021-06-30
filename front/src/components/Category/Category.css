@@ -43,7 +43,7 @@
   border-radius: 10px;
   align-items: center;
   text-decoration: none;
-  color: #fff;
+  color: rgb(102, 96, 96);
   font-size: 2em;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -55,7 +55,10 @@
 
 #select__categorie {
   background: transparent;
-  color: #fff;
+  color: rgba(0, 255, 42, 0.753);
+  font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
   border: none;
   border: 2px solid #fff;
   padding: 15px 21px;
@@ -72,17 +75,20 @@
   scale: 1;
 }
 
-.container__option h1 {
-  font-size: 20px;
+.container__option h2 {
+  font-size: 1em;
+  font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
   text-align: center;
   color: #fff;
   margin-top: 1rem;
 }
 
 .container__option p {
-  font-size: 15px;
+  width: 90%;
+  font-size: 1em;
+  font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
   margin-top: 1rem;
   text-align: center;
   color: #fff;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
