@@ -4,6 +4,7 @@ import "../styles/Accueil.css";
 import Header from "./Header/Header.jsx";
 import { gsap } from "gsap";
 import Tilt from "react-parallax-tilt";
+import Group_53 from "../images/Group_53.svg";
 
 function Accueil() {
   const nav = true;
@@ -28,7 +29,7 @@ function Accueil() {
     TimelineProject.from(allRef.current, {
       y: -50,
       duration: 0.5,
-      delay: 3.3,
+      delay: 3,
       opacity: 0,
       ease: "power2.out",
     })
@@ -65,73 +66,81 @@ function Accueil() {
   }, []);
 
   return (
-    <div onLoad={load} className={chargement ? "scroll" : "no-scroll"}>
-      <Loading />
-      <div className="background-accueil" ref={allRef}>
-        <Header nav={nav} />
-        <section className="accueil-part1">
-          <article className="accueil-quoi" ref={textRef1}>
+    <div className="couleur-fond">
+      <div
+        onLoad={load}
+        style={{
+          backgroundImage: `url(${Group_53})`,
+          backgroundSize: "cover",
+        }}
+        className={chargement ? "scroll" : "no-scroll"}
+      >
+        <Loading />
+        <div className="background-accueil" ref={allRef}>
+          <Header nav={nav} />
+          <section className="accueil-part1">
+            <article className="accueil-quoi" ref={textRef1}>
+              <Tilt>
+                <h1>The Fiverr Awards</h1>
+                <p>
+                  The fiver Awards provides creative students and young
+                  designers from around the world the opportunity to showcase
+                  their work to support their future potential. Open to students
+                  and young creatives. Awards open on the 1st September 2021.{" "}
+                </p>
+              </Tilt>
+            </article>
+            <section className="contenair-carrous1" ref={imgRef1}>
+              <img
+                className="accueil-imageC1"
+                src={require("../images/axel_a.png")}
+                alt="image1"
+              />
+              <img
+                className="accueil-imageC2"
+                src={require("../images/sylvain_a.png")}
+                alt="image1"
+              />
+              <img
+                className="accueil-imageC3"
+                src={require("../images/damien_a.png")}
+                alt="image1"
+              />
+            </section>
+          </section>
+          <section className="accueil-part2">
+            <article className="accueil-ou" ref={textRef2}>
+              <Tilt>
+                <h1>A whole world of freelance talent at your fingertips</h1>
+                Expand your team as needed with experienced freelancers already
+                vetted for business projects.{" "}
+              </Tilt>
+            </article>
+            <section className="contenair-carrous1" ref={imgRef2}>
+              <img
+                className="accueil-imageC4"
+                src={require("../images/thomas_a.png")}
+                alt="image1"
+              />
+              <img
+                className="accueil-imageC5"
+                src={require("../images/pierre2.png")}
+                alt="image1"
+              />
+              <img
+                className="accueil-imageC6"
+                src={require("../images/sylvain_a.png")}
+                alt="image1"
+              />
+            </section>
+          </section>
+          <article className="accueil-pourquoi" ref={textRef3}>
             <Tilt>
-              <h1>The Fiverr Awards</h1>
-
-              <p>
-                The fiver Awards provides creative students and young designers
-                from around the world the opportunity to showcase their work to
-                support their future potential. Open to students and young
-                creatives. Awards open on the 1st September 2021.{" "}
-              </p>
+              <h1>Explore Fiverr’s top talent</h1>
+              Unreal works made by real Fiverr freelancers.
             </Tilt>
           </article>
-          <section className="contenair-carrous1" ref={imgRef1}>
-            <img
-              className="accueil-imageC1"
-              src={require("../images/axel_a.png")}
-              alt="image1"
-            />
-            <img
-              className="accueil-imageC2"
-              src={require("../images/sylvain_a.png")}
-              alt="image1"
-            />
-            <img
-              className="accueil-imageC3"
-              src={require("../images/damien_a.png")}
-              alt="image1"
-            />
-          </section>
-        </section>
-        <section className="accueil-part2">
-          <article className="accueil-ou" ref={textRef2}>
-            <Tilt>
-              <h1>A whole world of freelance talent at your fingertips</h1>
-              Expand your team as needed with experienced freelancers already
-              vetted for business projects.{" "}
-            </Tilt>
-          </article>
-          <section className="contenair-carrous1" ref={imgRef2}>
-            <img
-              className="accueil-imageC4"
-              src={require("../images/thomas_a.png")}
-              alt="image1"
-            />
-            <img
-              className="accueil-imageC5"
-              src={require("../images/pierre2.png")}
-              alt="image1"
-            />
-            <img
-              className="accueil-imageC6"
-              src={require("../images/sylvain_a.png")}
-              alt="image1"
-            />
-          </section>
-        </section>
-        <article className="accueil-pourquoi" ref={textRef3}>
-          <Tilt>
-            <h1>Explore Fiverr’s top talent</h1>
-            Unreal works made by real Fiverr freelancers.
-          </Tilt>
-        </article>
+        </div>
       </div>
     </div>
   );

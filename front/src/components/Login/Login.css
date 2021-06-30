@@ -1,12 +1,6 @@
 .background {
   z-index: -2;
-  background: rgb(30, 190, 115);
-  background: radial-gradient(
-    circle,
-    rgba(30, 190, 115, 1) 0%,
-    rgba(148, 187, 233, 1) 89%,
-    rgba(247, 237, 209, 1) 100%
-  );
+  background: linear-gradient(170.46deg, #1EBE73 10.05%, #4BA3C3 48.85%, #F5CB5C 91.91%);
   min-height: 100vh;
 }
 .tilt-login {
