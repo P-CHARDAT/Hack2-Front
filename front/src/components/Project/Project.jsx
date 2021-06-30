@@ -5,50 +5,80 @@ import "./Project.css";
 import camera from "../../images/camera.png";
 import selectphoto from "../../images/selectpicture.png";
 import Header from "../Header/Header";
+import Group_53 from '../../images/Group_53.svg'
 
-export default function ParamsProfil({ versAccueil }) {
+export default function ParamsProfil() {
   const [fileSelected, setFileSelected] = useState(null);
   const [file, setFile] = useState(null);
   const [description, setDescription] = useState(null);
   const [link, setLink] = useState(null);
 
+  const allRef = useRef(null);
+  const imgRefContainer = useRef(null);
   const imgRef = useRef(null);
+  const labelImgRef = useRef(null);
   const input1Ref = useRef(null);
   const input2Ref = useRef(null);
   const btnRef = useRef(null);
   const traitRef = useRef(null);
+  const containerValidationRef = useRef(null);
 
   useEffect(() => {
     const TimelineProject = gsap.timeline();
 
-    TimelineProject.from(imgRef.current, {
+    TimelineProject.from(allRef.current, {
       y: -50,
-      duration: 0.7,
-      delay: 0.7,
+      duration: 0.5,
+      delay: 1,
       opacity: 0,
       ease: "power2.out",
     })
-      .from(traitRef.current, {
+      .from(imgRefContainer.current, {
         y: -50,
-        duration: 0.7,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
+      .from(imgRef.current, {
+        y: -50,
+        duration: 0.2,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(labelImgRef.current, {
+        y: -50,
+        duration: 0.2,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(traitRef.current, {
+        y: -50,
+        duration: 0.2,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(containerValidationRef.current, {
+        y: -50,
+        duration: 0.2,
+        opacity: 0,
+        ease: "power2.out",
+      })
+
       .from(input1Ref.current, {
         y: -50,
-        duration: 0.7,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(input2Ref.current, {
         y: -50,
-        duration: 0.7,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(btnRef.current, {
         y: -50,
-        duration: 0.7,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       });
@@ -98,8 +128,12 @@ export default function ParamsProfil({ versAccueil }) {
     }
   };
   return (
-    <div className="background-project">
-      <Header />
+    <div className="couleur-fond"  >
+      <div className="background-project" style={{
+        backgroundImage: `url(${Group_53})`,
+        backgroundSize: "cover"
+      }} ref={allRef}>
+        <Header />
       <div className="container__paramsprofil">
         <input
           type="file"
@@ -107,40 +141,57 @@ export default function ParamsProfil({ versAccueil }) {
           id="multer"
           onChange={onChangeFile}
         />
-        <div className="container__imgprofil" ref={imgRef}>
-          {!file && <img src={selectphoto} alt="test" id="img__multer" />}
-          {file && <img src={file.filename} alt="test" id="img__multer" />}
-          <label htmlFor="multer">
-            <img src={camera} alt="selection_image" id="imgPhoto" />
-          </label>
-        </div>
-        <div id="trait" ref={traitRef}></div>
-        <div className="container__validation">
-          <input
-            type="text"
-            className="input_projet1"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Description projet..."
-            ref={input1Ref}
-          />
-          <input
-            type="text"
-            className="input_projet2"
-            value={link}
-            onChange={(e) => setLink(e.target.value)}
-            placeholder="url du projet..."
-            ref={input2Ref}
-          />
 
-          <button
-            id="upload__img"
-            type="submit"
-            onClick={submitFiles}
-            ref={btnRef}
-          >
-            Save Project
-          </button>
+          <div className="container__imgprofil" ref={imgRefContainer}>
+            {!file && (
+              <img src={selectphoto} alt="test" id="img__multer" ref={imgRef} />
+            )}
+            {file && (
+              <img
+                src={`http://localhost:8000/asset_link/${file.filename}`}
+                alt="test"
+                id="img__multer"
+                ref={imgRef}
+              />
+            )}
+            <label htmlFor="multer">
+              <img
+                src={camera}
+                alt="selection_image"
+                id="imgPhoto"
+                ref={labelImgRef}
+              />
+            </label>
+          </div>
+
+          <div id="trait" ref={traitRef}></div>
+          <div className="container__validation" ref={containerValidationRef}>
+            <input
+              type="text"
+              className="input_projet1"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Describe your project..."
+              ref={input1Ref}
+            />
+            <input
+              type="text"
+              className="input_projet2"
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
+              placeholder="link of your project..."
+              ref={input2Ref}
+            />
+
+            <button
+              id="upload__img"
+              type="submit"
+              onClick={submitFiles}
+              ref={btnRef}
+            >
+              Save Project
+            </button>
+          </div>
         </div>
       </div>
     </div>

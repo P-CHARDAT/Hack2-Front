@@ -1,6 +1,32 @@
+.background-category {
+  flex-direction: column;
+  display: flex;
+  z-index: -2;
+  background: rgb(30, 190, 115);
+  background: radial-gradient(
+    circle,
+    rgba(30, 190, 115, 1) 0%,
+    rgba(148, 187, 233, 1) 89%,
+    rgba(247, 237, 209, 1) 100%
+  );
+  min-height: 100vh;
+}
+
+.bouton-admin {
+  width: 6vw;
+  height: 6vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .category__container {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
 }
@@ -10,38 +36,59 @@
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  /* css pour la vitre en verre */
+  position: relative;
+  /* width: 200px;
+  height: 200px; */
+  border-radius: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(102, 96, 96);
+  font-size: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 #select__categorie {
-    background: #000;
-    color: #fff;
-    border: none;
-    border: 2px solid #fff;
-    padding: 15px 21px;
-    border-radius: 10px;
-    width: 68%;
-    margin: 1rem auto;
+  background: transparent;
+  color: rgba(0, 255, 42, 0.753);
+  font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  border: none;
+  border: 2px solid #fff;
+  padding: 15px 21px;
+  border-radius: 10px;
+  width: 68%;
+  margin: 1rem auto;
 }
 
 .container__option {
   width: 100%;
   margin-top: 2rem;
-  background: #000;
+  background: transparent;
   border-radius: 15px;
   scale: 1;
 }
 
-.container__option h1 {
-  font-size: 20px;
+.container__option h2 {
+  font-size: 1em;
+  font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
   text-align: center;
   color: #fff;
   margin-top: 1rem;
 }
 
 .container__option p {
-  font-size: 15px;
+  width: 90%;
+  font-size: 1em;
+  font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
   margin-top: 1rem;
   text-align: center;
   color: #fff;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
