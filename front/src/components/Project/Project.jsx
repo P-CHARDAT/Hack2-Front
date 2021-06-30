@@ -12,6 +12,7 @@ export default function ParamsProfil() {
   const [description, setDescription] = useState(null);
   const [link, setLink] = useState(null);
 
+  const allRef = useRef(null);
   const imgRefContainer = useRef(null);
   const imgRef = useRef(null);
   const labelImgRef = useRef(null);
@@ -24,13 +25,19 @@ export default function ParamsProfil() {
   useEffect(() => {
     const TimelineProject = gsap.timeline();
 
-    TimelineProject.from(imgRefContainer.current, {
+    TimelineProject.from(allRef.current, {
       y: -50,
       duration: 0.5,
       delay: 1,
       opacity: 0,
       ease: "power2.out",
     })
+      .from(imgRefContainer.current, {
+        y: -50,
+        duration: 0.2,
+        opacity: 0,
+        ease: "power2.out",
+      })
       .from(imgRef.current, {
         y: -50,
         duration: 0.2,
@@ -55,7 +62,7 @@ export default function ParamsProfil() {
         opacity: 0,
         ease: "power2.out",
       })
-      
+
       .from(input1Ref.current, {
         y: -50,
         duration: 0.2,
@@ -121,7 +128,7 @@ export default function ParamsProfil() {
     }
   };
   return (
-    <div className="background-project">
+    <div className="background-project" ref={allRef}>
       <Header />
       <div className="container__paramsprofil">
         <input
@@ -160,7 +167,7 @@ export default function ParamsProfil() {
             className="input_projet1"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="Description projet..."
+            placeholder="Describe your project..."
             ref={input1Ref}
           />
           <input
@@ -168,7 +175,7 @@ export default function ParamsProfil() {
             className="input_projet2"
             value={link}
             onChange={(e) => setLink(e.target.value)}
-            placeholder="url du projet..."
+            placeholder="link of your project..."
             ref={input2Ref}
           />
 

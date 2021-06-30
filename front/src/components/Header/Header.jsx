@@ -57,7 +57,7 @@ function Header({ nav }) {
           </li>
         </ul>
         <div className="wrapper-clock">
-          <p>{timersDays}j&nbsp;</p>
+          <p>{timersDays}d&nbsp;</p>
           <p> {timersHours}h&nbsp;</p>
           <p> {timersMinute}min&nbsp;</p>
           <p> {timersSecond}sec&nbsp;</p>

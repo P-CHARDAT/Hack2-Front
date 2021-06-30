@@ -4,7 +4,6 @@ import "../styles/Accueil.css";
 import Header from "./Header/Header.jsx";
 import { gsap } from "gsap";
 
-
 function Accueil() {
   const nav = true;
   const [chargement, setChargement] = useState(false);
@@ -14,57 +13,55 @@ function Accueil() {
     }, 2750);
   }
 
-// Effet d'apparition en délai de la page
-const allRef = useRef(null);
-const textRef1 = useRef(null);
-const imgRef1 = useRef(null);
-const imgRef2 = useRef(null);
-const textRef2 = useRef(null);
-const textRef3 = useRef(null);
+  // Effet d'apparition en délai de la page
+  const allRef = useRef(null);
+  const textRef1 = useRef(null);
+  const imgRef1 = useRef(null);
+  const imgRef2 = useRef(null);
+  const textRef2 = useRef(null);
+  const textRef3 = useRef(null);
 
+  useEffect(() => {
+    const TimelineProject = gsap.timeline();
 
-useEffect(() => {
-  const TimelineProject = gsap.timeline();
-
-  TimelineProject.from(allRef.current, {
-    y: -50,
-    duration: 0.5,
-    delay: 3.3,
-    opacity: 0,
-    ease: "power2.out",
-  })
-  .from(textRef1.current, {
-    y: -50,
-    duration: 0.5,
-    opacity: 0,
-    ease: "power2.out",
-  })
-    .from(imgRef1.current, {
+    TimelineProject.from(allRef.current, {
       y: -50,
       duration: 0.5,
+      delay: 3.3,
       opacity: 0,
       ease: "power2.out",
     })
-    .from(imgRef2.current, {
-      y: -50,
-      duration: 0.5,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(textRef2.current, {
-      y: -50,
-      duration: 0.5,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(textRef3.current, {
-      y: -50,
-      duration: 0.5,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    
-}, []);
+      .from(textRef1.current, {
+        y: -50,
+        duration: 0.5,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(imgRef1.current, {
+        y: -50,
+        duration: 0.5,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(imgRef2.current, {
+        y: -50,
+        duration: 0.5,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(textRef2.current, {
+        y: -50,
+        duration: 0.5,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(textRef3.current, {
+        y: -50,
+        duration: 0.5,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  }, []);
 
   return (
     <div onLoad={load} className={chargement ? "scroll" : "no-scroll"}>
@@ -72,7 +69,16 @@ useEffect(() => {
       <div className="background-accueil" ref={allRef}>
         <Header nav={nav} />
         <section className="accueil-part1">
-          <article className="accueil-quoi" ref={textRef1}>quoi qui</article>
+          <article className="accueil-quoi" ref={textRef1}>
+            <h1>The Fiverr Awards</h1>
+
+            <p>
+              The fiver Awards provides creative students and young designers
+              from around the world the opportunity to showcase their work to
+              support their future potential. Open to students and young
+              creatives. Awards open on the 1st September 2021.{" "}
+            </p>
+          </article>
           <section className="contenair-carrous1" ref={imgRef1}>
             <img
               className="accueil-imageC1"
@@ -92,7 +98,11 @@ useEffect(() => {
           </section>
         </section>
         <section className="accueil-part2">
-          <article className="accueil-ou" ref={textRef2}>quoi qui</article>
+          <article className="accueil-ou" ref={textRef2}>
+            <h1>A whole world of freelance talent at your fingertips</h1>Expand
+            your team as needed with experienced freelancers already vetted for
+            business projects.{" "}
+          </article>
           <section className="contenair-carrous1" ref={imgRef2}>
             <img
               className="accueil-imageC4"
@@ -111,9 +121,12 @@ useEffect(() => {
             />
           </section>
         </section>
-        <article className="accueil-pourquoi" ref={textRef3}>quoi qui</article>
+        <article className="accueil-pourquoi" ref={textRef3}>
+          <h1>Explore Fiverr’s top talent</h1>
+          Unreal works made by real Fiverr freelancers.
+        </article>
       </div>
-    </div >
+    </div>
   );
 }
 
