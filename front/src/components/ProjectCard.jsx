@@ -14,11 +14,10 @@ function ProjectCard({ asset_link, description, pseudo, type, url_link, id}) {
   };
   return (
 
-    <div className="couleur-fond" style={{
-      backgroundImage: `url(${Group_53})`,
-      backgroundSize: "cover"
-    }} >
-      <div className="ProjectCard" onClick={selectProjet}>
+    <div className="couleur-fond"  >
+      <div className="ProjectCard contain" style={{
+        backgroundImage: `url(${Group_53})`
+      }}>
         <h2>Project shared by: {pseudo}</h2>
         <figure className="projectPicture">
           <img src={`http://localhost:8000/asset_link/${asset_link}`} alt={`${pseudo} Project`} />

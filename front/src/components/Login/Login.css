@@ -1,6 +1,11 @@
 .background {
   z-index: -2;
-  background: linear-gradient(170.46deg, #1EBE73 10.05%, #4BA3C3 48.85%, #F5CB5C 91.91%);
+  background: linear-gradient(
+    170.46deg,
+    #1ebe73 10.05%,
+    #4ba3c3 48.85%,
+    #f5cb5c 91.91%
+  );
   min-height: 100vh;
 }
 .tilt-login {
@@ -24,7 +29,6 @@
   justify-content: center;
   text-decoration: none;
   color: #fff;
-  font-size: 2em;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -155,3 +159,10 @@
   height: 100%;
   transform: translateY(-100%);
 }
+
+@media screen and (min-width: 1040px) {
+  .contenair__login {
+    font-size: 2em;
+  }
+}
+
