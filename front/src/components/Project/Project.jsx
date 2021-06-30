@@ -5,6 +5,7 @@ import "./Project.css";
 import camera from "../../images/camera.png";
 import selectphoto from "../../images/selectpicture.png";
 import Header from "../Header/Header";
+import Tilt from "react-parallax-tilt";
 
 export default function ParamsProfil() {
   const [fileSelected, setFileSelected] = useState(null);
@@ -136,10 +137,11 @@ export default function ParamsProfil() {
           id="multer"
           onChange={onChangeFile}
         />
-
         <div className="container__imgprofil" ref={imgRefContainer}>
           {!file && (
-            <img src={selectphoto} alt="test" id="img__multer" ref={imgRef} />
+            <Tilt>
+              <img src={selectphoto} alt="test" id="img__multer" ref={imgRef} />
+            </Tilt>
           )}
           {file && (
             <img
@@ -158,7 +160,6 @@ export default function ParamsProfil() {
             />
           </label>
         </div>
-
         <div id="trait" ref={traitRef}></div>
         <div className="container__validation" ref={containerValidationRef}>
           <input

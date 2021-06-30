@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import "./Login.css";
 import { gsap } from "gsap";
+import Tilt from "react-parallax-tilt";
 
 function Login() {
   // Effet d'apparition en délai de la page
@@ -60,34 +61,38 @@ function Login() {
       <Header />
 
       <div className="container__login" ref={formRef}>
-        <input
-          type="text"
-          placeholder="Pseudo..."
-          className="input__login"
-          ref={inputRef1}
-        />
-        <input
-          type="text"
-          placeholder="Mail..."
-          className="input__login"
-          ref={inputRef2}
-        />
-        <input
-          type="password"
-          placeholder="Password..."
-          className="input__login"
-          ref={inputRef3}
-        />
+        <div className="tilt-login">
+          <input
+            type="text"
+            placeholder="Pseudo..."
+            className="input__login"
+            ref={inputRef1}
+          />
+          <input
+            type="text"
+            placeholder="Mail..."
+            className="input__login"
+            ref={inputRef2}
+          />
+          <input
+            type="password"
+            placeholder="Password..."
+            className="input__login"
+            ref={inputRef3}
+          />
 
-        <Link to="/Category">
-          <button id="btn__login" ref={validateRef}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Sign in
-          </button>
-        </Link>
+          <Tilt>
+            <Link to="/Category">
+              <button id="btn__login" ref={validateRef}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign in
+              </button>
+            </Link>
+          </Tilt>
+        </div>
       </div>
     </div>
   );

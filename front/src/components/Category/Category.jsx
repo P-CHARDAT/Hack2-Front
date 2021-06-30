@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import "./Category.css";
 import { gsap } from "gsap";
+import Tilt from "react-parallax-tilt";
 
 function Category() {
   // const [selectedCategory, setSelectedCategory] = useState('Category');
@@ -104,37 +105,39 @@ function Category() {
                 </option>
               ))}
             </select>
-            {categorie && <div></div>}
-            {developpement && (
-              <div className="container__option" ref={popupRef}>
-                <h1>Theme : Web Development</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  dolorem animi sequi, quisquam pariatur minima aperiam. Odio
-                  eos rem, quasi ut eligendi cupiditate earum autem voluptates
-                  iusto totam magnam doloremque.
-                </p>
-              </div>
-            )}
-            {design && (
-              <div className="container__option" ref={popupRef}>
-                <h1>Theme : Portrait</h1>
-                <p>
-                  Check your skills on drawing portraits and share your artwork
-                  with the whole community to have a place on{" "}
-                  <strong>Fiverr's wall of fames</strong> !
-                </p>
-              </div>
-            )}
-            {programming && (
-              <div className="container__option" ref={popupRef}>
-                <h1>Theme : Create the next React application</h1>
-                <p>
-                  Any React.js-based web site can candidate to obtain this
-                  semestrial award on React application development.
-                </p>
-              </div>
-            )}
+            <Tilt>
+              {categorie && <div></div>}
+              {developpement && (
+                <div className="container__option" ref={popupRef}>
+                  <h1>Theme : Web Development</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                    dolorem animi sequi, quisquam pariatur minima aperiam. Odio
+                    eos rem, quasi ut eligendi cupiditate earum autem voluptates
+                    iusto totam magnam doloremque.
+                  </p>
+                </div>
+              )}
+              {design && (
+                <div className="container__option" ref={popupRef}>
+                  <h1>Theme : Portrait</h1>
+                  <p>
+                    Check your skills on drawing portraits and share your
+                    artwork with the whole community to have a place on{" "}
+                    <strong>Fiverr's wall of fames</strong> !
+                  </p>
+                </div>
+              )}
+              {programming && (
+                <div className="container__option" ref={popupRef}>
+                  <h1>Theme : Create the next React application</h1>
+                  <p>
+                    Any React.js-based web site can candidate to obtain this
+                    semestrial award on React application development.
+                  </p>
+                </div>
+              )}
+            </Tilt>
           </div>
         </div>
       </div>

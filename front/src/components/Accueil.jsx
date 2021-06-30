@@ -3,6 +3,7 @@ import Loading from "./Loading/Loading";
 import "../styles/Accueil.css";
 import Header from "./Header/Header.jsx";
 import { gsap } from "gsap";
+import Tilt from "react-parallax-tilt";
 
 function Accueil() {
   const nav = true;
@@ -70,14 +71,16 @@ function Accueil() {
         <Header nav={nav} />
         <section className="accueil-part1">
           <article className="accueil-quoi" ref={textRef1}>
-            <h1>The Fiverr Awards</h1>
+            <Tilt>
+              <h1>The Fiverr Awards</h1>
 
-            <p>
-              The fiver Awards provides creative students and young designers
-              from around the world the opportunity to showcase their work to
-              support their future potential. Open to students and young
-              creatives. Awards open on the 1st September 2021.{" "}
-            </p>
+              <p>
+                The fiver Awards provides creative students and young designers
+                from around the world the opportunity to showcase their work to
+                support their future potential. Open to students and young
+                creatives. Awards open on the 1st September 2021.{" "}
+              </p>
+            </Tilt>
           </article>
           <section className="contenair-carrous1" ref={imgRef1}>
             <img
@@ -99,9 +102,11 @@ function Accueil() {
         </section>
         <section className="accueil-part2">
           <article className="accueil-ou" ref={textRef2}>
-            <h1>A whole world of freelance talent at your fingertips</h1>Expand
-            your team as needed with experienced freelancers already vetted for
-            business projects.{" "}
+            <Tilt>
+              <h1>A whole world of freelance talent at your fingertips</h1>
+              Expand your team as needed with experienced freelancers already
+              vetted for business projects.{" "}
+            </Tilt>
           </article>
           <section className="contenair-carrous1" ref={imgRef2}>
             <img
@@ -122,8 +127,10 @@ function Accueil() {
           </section>
         </section>
         <article className="accueil-pourquoi" ref={textRef3}>
-          <h1>Explore Fiverr’s top talent</h1>
-          Unreal works made by real Fiverr freelancers.
+          <Tilt>
+            <h1>Explore Fiverr’s top talent</h1>
+            Unreal works made by real Fiverr freelancers.
+          </Tilt>
         </article>
       </div>
     </div>
