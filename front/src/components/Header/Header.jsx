@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import Tilt from "react-parallax-tilt";
 
 function Header({ nav }) {
   const [timersDays, setTimersDays] = useState("00");
@@ -20,9 +21,7 @@ function Header({ nav }) {
       const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      const minute = Math.floor(
-        (distance % (1000 * 60 * 24)) / (1000 * 60)
-      );
+      const minute = Math.floor((distance % (1000 * 60 * 24)) / (1000 * 60));
       const seconde = Math.floor((distance % (1000 * 60)) / 1000);
 
       if (distance < 0) {
@@ -57,10 +56,14 @@ function Header({ nav }) {
           </li>
         </ul>
         <div className="wrapper-clock">
-          <p>{timersDays}d&nbsp;</p>
-          <p> {timersHours}h&nbsp;</p>
-          <p> {timersMinute}min&nbsp;</p>
-          <p> {timersSecond}sec&nbsp;</p>
+          <Tilt>
+            <div className="Tilt-container-header">
+              <p>{timersDays}d&nbsp;</p>
+              <p> {timersHours}h&nbsp;</p>
+              <p> {timersMinute}min&nbsp;</p>
+              <p> {timersSecond}sec&nbsp;</p>
+            </div>
+          </Tilt>
         </div>
       </div>
     </section>

@@ -49,7 +49,6 @@
   backdrop-filter: blur(2px);
   transition: 0.5s;
   margin: 2vh 0;
-  padding: 10px;
   text-align: center;
   flex-direction: column;
 }
@@ -76,6 +75,7 @@
   backdrop-filter: blur(2px);
   transition: 0.5s;
   margin: 2vh 0;
+  text-align: center;
   flex-direction: column;
 }
 

@@ -77,6 +77,15 @@
   border-radius: 100px;
   flex-direction: column;
 }
+.Tilt-container-header {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  list-style: none;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: column;
+}
 
 @media screen and (min-width: 1040px) {
   .wrapper-logo {
@@ -92,5 +101,15 @@
     flex-direction: row;
     width: 50%;
     height: 100px;
+  }
+
+  .Tilt-container-header {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    list-style: none;
+    align-items: center;
+    text-decoration: none;
+    flex-direction: row;
   }
 }
