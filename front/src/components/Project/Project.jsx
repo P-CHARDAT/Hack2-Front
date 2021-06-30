@@ -5,6 +5,7 @@ import "./Project.css";
 import camera from "../../images/camera.png";
 import selectphoto from "../../images/selectpicture.png";
 import Header from "../Header/Header";
+import Group_53 from '../../images/Group_53.svg'
 
 export default function ParamsProfil() {
   const [fileSelected, setFileSelected] = useState(null);
@@ -127,65 +128,71 @@ export default function ParamsProfil() {
     }
   };
   return (
-    <div className="background-project" ref={allRef}>
-      <Header />
-      <div className="container__paramsprofil">
-        <input
-          type="file"
-          accept="image/*"
-          id="multer"
-          onChange={onChangeFile}
-        />
 
-        <div className="container__imgprofil" ref={imgRefContainer}>
-          {!file && (
-            <img src={selectphoto} alt="test" id="img__multer" ref={imgRef} />
-          )}
-          {file && (
-            <img
-              src={`http://localhost:8000/asset_link/${file.filename}`}
-              alt="test"
-              id="img__multer"
-              ref={imgRef}
-            />
-          )}
-          <label htmlFor="multer">
-            <img
-              src={camera}
-              alt="selection_image"
-              id="imgPhoto"
-              ref={labelImgRef}
-            />
-          </label>
-        </div>
-
-        <div id="trait" ref={traitRef}></div>
-        <div className="container__validation" ref={containerValidationRef}>
+    <div className="couleur-fond"  >
+      <div className="background-project" style={{
+        backgroundImage: `url(${Group_53})`,
+        backgroundSize: "cover"
+      }} ref={allRef}>
+        <Header />
+        <div className="container__paramsprofil">
           <input
-            type="text"
-            className="input_projet1"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Describe your project..."
-            ref={input1Ref}
-          />
-          <input
-            type="text"
-            className="input_projet2"
-            value={link}
-            onChange={(e) => setLink(e.target.value)}
-            placeholder="link of your project..."
-            ref={input2Ref}
+            type="file"
+            accept="image/*"
+            id="multer"
+            onChange={onChangeFile}
           />
 
-          <button
-            id="upload__img"
-            type="submit"
-            onClick={submitFiles}
-            ref={btnRef}
-          >
-            Save Project
-          </button>
+          <div className="container__imgprofil" ref={imgRefContainer}>
+            {!file && (
+              <img src={selectphoto} alt="test" id="img__multer" ref={imgRef} />
+            )}
+            {file && (
+              <img
+                src={`http://localhost:8000/asset_link/${file.filename}`}
+                alt="test"
+                id="img__multer"
+                ref={imgRef}
+              />
+            )}
+            <label htmlFor="multer">
+              <img
+                src={camera}
+                alt="selection_image"
+                id="imgPhoto"
+                ref={labelImgRef}
+              />
+            </label>
+          </div>
+
+          <div id="trait" ref={traitRef}></div>
+          <div className="container__validation" ref={containerValidationRef}>
+            <input
+              type="text"
+              className="input_projet1"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Describe your project..."
+              ref={input1Ref}
+            />
+            <input
+              type="text"
+              className="input_projet2"
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
+              placeholder="link of your project..."
+              ref={input2Ref}
+            />
+
+            <button
+              id="upload__img"
+              type="submit"
+              onClick={submitFiles}
+              ref={btnRef}
+            >
+              Save Project
+            </button>
+          </div>
         </div>
       </div>
     </div>
