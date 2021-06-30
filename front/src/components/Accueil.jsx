@@ -72,7 +72,14 @@ function Accueil() {
         <div className="background-accueil" ref={allRef}>
           <Header nav={nav} />
           <section className="accueil-part1">
-            <article className="accueil-quoi" ref={textRef1}>quoi qui</article>
+            <article className="accueil-quoi" ref={textRef1}><h1>The Fiverr Awards</h1>
+              <p>
+                The fiver Awards provides creative students and young designers
+                from around the world the opportunity to showcase their work to
+                support their future potential. Open to students and young
+                creatives. Awards open on the 1st September 2021.{" "}
+              </p>
+            </article>
             <section className="contenair-carrous1" ref={imgRef1}>
               <img
                 className="accueil-imageC1"
@@ -92,7 +99,11 @@ function Accueil() {
             </section>
           </section>
           <section className="accueil-part2">
-            <article className="accueil-ou" ref={textRef2}>quoi qui</article>
+            <article className="accueil-ou" ref={textRef2}>
+              <h1>A whole world of freelance talent at your fingertips</h1>Expand
+              your team as needed with experienced freelancers already vetted for
+              business projects.{" "}
+            </article>
             <section className="contenair-carrous1" ref={imgRef2}>
               <img
                 className="accueil-imageC4"
@@ -111,7 +122,10 @@ function Accueil() {
               />
             </section>
           </section>
-          <article className="accueil-pourquoi" ref={textRef3}>quoi qui</article>
+          <article className="accueil-pourquoi" ref={textRef3}>
+            <h1>Explore Fiverr’s top talent</h1>
+            Unreal works made by real Fiverr freelancers.
+          </article>
         </div>
       </div >
     </div>
