@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import { Link } from "react-router-dom";
 import Header from "./Header/Header";
 import '../styles/Gallery.css';
 import { gsap } from "gsap";
@@ -9,7 +8,7 @@ import Group_53 from '../images/Group_53.svg';
 function Gallery() {
   const [projectInfo, setProjectInfo] = useState([]);
 
-  
+  const allRef = useRef(null);
 
   useEffect(() => {
     fetch("http://localhost:8000/api/project/infos")
@@ -42,7 +41,7 @@ function Gallery() {
         <div className="cardInList">
           <h1 className="listTitle">Our Participants</h1>
           {projectInfo.map((info) => (
-            <ProjectCard key={info.id} {...info} ref={popupRef}/>
+            <ProjectCard key={info.id} {...info}/>
           ))}
         </div>
       </section>

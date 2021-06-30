@@ -34,8 +34,9 @@ export default function ProjectVote({asset_link, description, pseudo, type, url_
     voteCountDelete();
     phraseDeleteVote();
   };
+
   useEffect(() => {
-    fetch("http://localhost:8000/api/project/infos")
+    fetch(`http://localhost:8000/api/project/infosid/${id}`)
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
@@ -46,17 +47,17 @@ export default function ProjectVote({asset_link, description, pseudo, type, url_
   return (
     <div className="container__projectvote">
       <div className="container__project__picture">
-        <img src={`http://localhost:8000/asset_link/${asset_link}`} alt={`${pseudo} Project`} id="img__projet" />
+        <img src={`http://localhost:8000/asset_link/${projectVote.asset_link}`} alt={`${pseudo} Project`} id="img__projet" />
       </div>
       <div id="trait__vote"></div>
       <div className="container__info__desktop">
         <div className="container__infoproject">
           <h3>Vote actuelle : {count}</h3>
           <div className="info__description__url">
-            <p>{description}</p>
+            <p>{projectVote.description}</p>
           </div>
           <div className="info__description__url">
-          <a href={url_link}>{url_link}</a>
+          <a href={projectVote.url_link}>{projectVote.url_link}</a>
           </div>
         </div>
         <h2 id="donne__vote">Donne ton vote pour ce projet !!!</h2>
