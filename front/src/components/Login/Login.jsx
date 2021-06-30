@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import "./Login.css";
 import { gsap } from "gsap";
+import Group_53 from '../../images/Group_53.svg'
 
 function Login() {
   // Effet d'apparition en délai de la page
@@ -56,38 +57,43 @@ function Login() {
   }, []);
 
   return (
-    <div className="background" ref={allRef}>
-      <Header />
+    <div className="couleur-fond"  >
+      <div className="background" style={{
+        backgroundImage: `url(${Group_53})`,
+        backgroundSize: "cover"
+      }} ref={allRef}>
+        <Header />
 
-      <div className="container__login" ref={formRef}>
-        <input
-          type="text"
-          placeholder="Pseudo..."
-          className="input__login"
-          ref={inputRef1}
-        />
-        <input
-          type="text"
-          placeholder="Mail..."
-          className="input__login"
-          ref={inputRef2}
-        />
-        <input
-          type="password"
-          placeholder="Password..."
-          className="input__login"
-          ref={inputRef3}
-        />
+        <div className="container__login" ref={formRef}>
+          <input
+            type="text"
+            placeholder="Pseudo..."
+            className="input__login"
+            ref={inputRef1}
+          />
+          <input
+            type="text"
+            placeholder="Mail..."
+            className="input__login"
+            ref={inputRef2}
+          />
+          <input
+            type="password"
+            placeholder="Password..."
+            className="input__login"
+            ref={inputRef3}
+          />
 
-        <Link to="/Category">
-          <button id="btn__login" ref={validateRef}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Sign in
-          </button>
-        </Link>
+          <Link to="/Category">
+            <button id="btn__login" ref={validateRef}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Sign in
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,6 @@
 
 .no-scroll, .scroll {
   overflow: hidden;
-  background-size: cover;
   width: 100%;
   z-index: -2;
   min-height: 100vh;
