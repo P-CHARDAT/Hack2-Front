@@ -16,9 +16,9 @@ function Category() {
 
   const popupRef = useRef(null);
   const allRef = useRef(null);
+  const containerRef = useRef(null);
+  const selectorRef = useRef(null);
 
-
-  
   useEffect(() => {
     fetch("http://localhost:8000/api/category")
       .then((resp) => resp.json())
@@ -76,7 +76,19 @@ function Category() {
       delay: 0.5,
       opacity: 0,
       ease: "power2.out",
-    });
+    })
+      .from(containerRef.current, {
+        y: -50,
+        duration: 0.3,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(selectorRef.current, {
+        y: -50,
+        duration: 0.3,
+        opacity: 0,
+        ease: "power2.out",
+      });
   }, []);
 
   useEffect(() => {
@@ -91,7 +103,7 @@ function Category() {
   }, [handleChange]);
 
   return (
-    <div className="couleur-fond">
+    <div className="couleur-fond" ref={allRef}>
       <div
         style={{
           backgroundImage: `url(${Group_53})`,
@@ -101,12 +113,13 @@ function Category() {
       >
         <Header />
         <div>
-          <div className="category__container">
-            <div className="container__input" ref={allRef}>
+          <div className="category__container" ref={containerRef}>
+            <div className="container__input">
               <select
                 name="categorie"
                 id="select__categorie"
                 onChange={handleChange}
+                ref={selectorRef}
               >
                 <option defaultValue={categorie}>Choose a category</option>
                 {catList.map((item, index) => (

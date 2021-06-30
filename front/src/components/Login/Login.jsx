@@ -27,31 +27,31 @@ function Login() {
     })
       .from(formRef.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(inputRef1.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(inputRef2.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(inputRef3.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(validateRef.current, {
         y: -50,
-        duration: 0.5,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       });

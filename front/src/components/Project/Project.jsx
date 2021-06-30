@@ -36,50 +36,50 @@ export default function ParamsProfil() {
     })
       .from(imgRefContainer.current, {
         y: -50,
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(imgRef.current, {
         y: -50,
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(labelImgRef.current, {
         y: -50,
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(traitRef.current, {
         y: -50,
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(containerValidationRef.current, {
         y: -50,
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
 
       .from(input1Ref.current, {
         y: -50,
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(input2Ref.current, {
         y: -50,
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       })
       .from(btnRef.current, {
         y: -50,
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
       });
