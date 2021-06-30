@@ -66,10 +66,15 @@ function Accueil() {
   }, []);
 
   return (
-    <div className="couleur-fond"  >
-      <div onLoad={load} style={{
-        backgroundImage: `url(${Group_53})`,
-      }} className= {chargement ? "scroll contain" : "no-scroll contain" }>
+    <div className="couleur-fond">
+      <div
+        onLoad={load}
+        style={{
+          backgroundImage: `url(${Group_53})`,
+          backgroundSize: "cover",
+        }}
+        className={chargement ? "scroll" : "no-scroll"}
+      >
         <Loading />
         <div className="background-accueil" ref={allRef}>
           <Header nav={nav} />
