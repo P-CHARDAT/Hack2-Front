@@ -4,7 +4,9 @@ import Header from "../Header/Header";
 import "./Category.css";
 import { gsap } from "gsap";
 
-function Category({ versAccueil }) {
+function Category() {
+  // const [selectedCategory, setSelectedCategory] = useState('Category');
+  const [catList, setCatList] = useState([]);
   const [categorie, setCategorie] = useState(true);
   const [developpement, setDeveloppement] = useState(false);
   const [design, setDesign] = useState(false);
@@ -12,10 +14,14 @@ function Category({ versAccueil }) {
 
   const popupRef = useRef(null);
 
+  useEffect(() => {
+    fetch("http://localhost:8000/api/category")
+      .then((resp) => resp.json())
+      .then((data) => {
+        setCatList(data);
+      });
+  }, []);
 
-  
-  
-  
   const handleChange = (event) => {
     if (event.target.value === "musique") {
       clickMusique();
@@ -27,28 +33,28 @@ function Category({ versAccueil }) {
       clickCategorie();
     }
   };
-  
+
   const clickCategorie = () => {
     setCategorie(true);
     setDeveloppement(false);
     setDesign(false);
     setMusique(false);
   };
-  
+
   const clickDeveloppement = () => {
     setCategorie(false);
     setDeveloppement(true);
     setDesign(false);
     setMusique(false);
   };
-  
+
   const clickDesign = () => {
     setCategorie(false);
     setDeveloppement(false);
     setDesign(true);
     setMusique(false);
   };
-  
+
   const clickMusique = () => {
     setCategorie(false);
     setDeveloppement(false);
@@ -59,17 +65,17 @@ function Category({ versAccueil }) {
     const TimelineProject = gsap.timeline();
 
     TimelineProject.from(popupRef.current, {
-       scale: 0,
+      scale: 0,
       duration: 0.7,
       delay: 0.7,
-     
+
       ease: "power2.out",
     })
   }, [handleChange]);
 
   return (
     <div>
-      <Header versAccueil={versAccueil} />
+      <Header />
       <div>
         <div className="category__container">
           <div className="container__input">
@@ -79,9 +85,11 @@ function Category({ versAccueil }) {
               onChange={handleChange}
             >
               <option defaultValue={categorie}>Choose a category</option>
-              <option value="developpement">Web Développement</option>
-              <option value="design">Web Design</option>
-              <option value="musique">Musique</option>
+              {catList.map((item, index) => (
+                <option key={index} value={item.type}>
+                  {item.type}
+                </option>
+              ))}
             </select>
             {categorie && <div></div>}
             {developpement && (
@@ -120,10 +128,16 @@ function Category({ versAccueil }) {
           </div>
         </div>
       </div>
-      <Link to="/Project">
-        <button>Projet</button>
-      </Link>
-    </div>
+      <div className="bouton-admin">
+        <p>Admin :</p>
+        <Link to="/Project">
+          <button>Projet</button>
+        </Link>
+        <Link to="/Gallery">
+          <button>Gallery</button>
+        </Link>
+      </div>
+    </div >
   );
 }
 

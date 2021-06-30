@@ -1,7 +1,7 @@
 .no-scroll {
   height: 100vh;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   z-index: -2;
   background: rgb(30, 190, 115);
   background: radial-gradient(
@@ -15,7 +15,7 @@
 
 .scroll {
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   z-index: -2;
   background: rgb(30, 190, 115);
   background: radial-gradient(
