@@ -5,8 +5,7 @@ import "./Project.css";
 import camera from "../../images/camera.png";
 import selectphoto from "../../images/selectpicture.png";
 import Header from "../Header/Header";
-import Tilt from "react-parallax-tilt";
-import Group_53 from "../../images/Group_53.svg";
+import Group_53 from '../../images/Group_53.svg'
 
 export default function ParamsProfil() {
   const [fileSelected, setFileSelected] = useState(null);
@@ -36,50 +35,50 @@ export default function ParamsProfil() {
     })
       .from(imgRefContainer.current, {
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(imgRef.current, {
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(labelImgRef.current, {
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(traitRef.current, {
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(containerValidationRef.current, {
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
 
       .from(input1Ref.current, {
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(input2Ref.current, {
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       })
       .from(btnRef.current, {
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
         opacity: 0,
         ease: "power2.out",
       });
@@ -118,7 +117,7 @@ export default function ParamsProfil() {
         .then((data) => {
           console.log(data);
           setFile({
-            filename: `http://localhost:8000/asset_link/` + data.asset_link,
+            filename: data.asset_link,
           });
           setDescription("");
           setLink("");
@@ -129,15 +128,12 @@ export default function ParamsProfil() {
     }
   };
   return (
-    <div className="couleur-fond">
-      <div
-        className="background-project"
-        style={{
-          backgroundImage: `url(${Group_53})`,
-          backgroundSize: "cover",
-        }}
-        ref={allRef}
-      >
+
+    <div className="couleur-fond"  >
+      <div className="background-project" style={{
+        backgroundImage: `url(${Group_53})`,
+        backgroundSize: "cover"
+      }} ref={allRef}>
         <Header />
         <div className="container__paramsprofil">
           <input
@@ -149,14 +145,7 @@ export default function ParamsProfil() {
 
           <div className="container__imgprofil" ref={imgRefContainer}>
             {!file && (
-              <Tilt>
-                <img
-                  src={selectphoto}
-                  alt="test"
-                  id="img__multer"
-                  ref={imgRef}
-                />
-              </Tilt>
+              <img src={selectphoto} alt="test" id="img__multer" ref={imgRef} />
             )}
             {file && (
               <img
@@ -164,8 +153,8 @@ export default function ParamsProfil() {
                 alt="test"
                 id="img__multer"
                 ref={imgRef}
-              />
-            )}
+              />)}
+            
             <label htmlFor="multer">
               <img
                 src={camera}

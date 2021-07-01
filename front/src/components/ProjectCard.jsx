@@ -19,7 +19,7 @@ function ProjectCard({ asset_link, description, pseudo, type, url_link, id}) {
         backgroundImage: `url(${Group_53})`
       }}>
         <h2>Project shared by: {pseudo}</h2>
-        <figure className="projectPicture">
+        <figure className="projectPicture" onClick={selectProjet}>
           <img src={`http://localhost:8000/asset_link/${asset_link}`} alt={`${pseudo} Project`} />
           <h3>Project description:</h3>
           <figcaption>{description}</figcaption>
